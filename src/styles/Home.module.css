@@ -1,0 +1,137 @@
+
+/* Style for the overskrift class */
+.overskrift {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/gulPinkBaggrund.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  
+  /* Additional styles for the overskrift class */
+  .overskrift h1 {
+    animation: wavyText 2s infinite;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 40vh;
+  }
+
+
+  
+  
+
+
+.programKnap{
+    display: flex;
+    align-items: flex-end;
+    place-content: space-around;
+    background-color: orange;
+    width: 100vw; /* Set the width to 100% of the viewport */
+    height: 5rem;
+    border: none;
+    font-size: 2.8rem;
+}
+
+
+
+.eventKnap{
+    display: flex;
+    align-items: center;
+    place-content: space-around;
+    background-color: blue;
+    width: 100vw; /* Set the width to 100% of the viewport */
+    height: 5rem;
+    margin-top: 3px;
+    border: none;
+    font-size: 2.8rem;
+}
+
+.mapKnap{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    background-color: turquoise;
+    width: 100vw; /* Set the width to 100% of the viewport */
+    height: 5rem;
+    margin-top: 5px;
+    border: none;
+    font-size: 2.8rem;
+}
+
+.artist_column{
+    display: flex;
+    justify-content: left;
+    background-color: rgb(184, 184, 220);
+    width: 100vw; /* Set the width to 100% of the viewport */
+    height: 10rem;
+    margin-top: 10px;
+    border: none;
+    font-size: 1.2rem;
+/* img hya i global 20px margin */
+}
+
+.KnapArtist{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(184, 184, 220);
+    position: absolute;
+    right: 15px;
+    border: none;
+    width: 31px;
+    height: 20px;
+    margin-top: 120px;
+}
+
+
+/*STYLING MAP*/ 
+
+/*oveerskrift + underoverskrift*/ 
+.map_top{
+    background-color:#32A140;
+    text-align: center;
+    padding-block: 50px;
+    margin-bottom: -35px;
+    margin-left: 0px;
+    margin-top: -7px;
+}
+
+.map_overskrift{
+    font-size: 2rem;
+    color: white;
+}
+
+.map_underOverskrift{
+    color: white;
+    font-size: 1rem;  
+    margin-top: -15px
+}
+
+
+
+/*STYLING SCENE MODAL*/ 
+
+/*div omkring navnet på scnen og telt-svg*/ 
+  .scene_modal_sceneNavnOgTelt{
+    display: flex;
+    flex-direction: row;
+}
+
+/*telt-svg*/ 
+img.scene_modal_telt {
+    height: 3rem !important;
+}
+
+/*artist/band navn*/ 
+.scene_modal_BandName{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+/*spilletidspunkt*/ 
+.scene_modal_tidspunkt{
+    margin-top: -20px;
+    font-size: 1.5rem;
+}

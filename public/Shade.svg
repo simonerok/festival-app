@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1144" height="326" viewBox="0 0 1144 326">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="1" x2="0.07" y2="0.956" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c3e0eb"/>
+      <stop offset="1" stop-color="#cbe3ed"/>
+    </linearGradient>
+    <clipPath id="clip-Shade">
+      <rect width="1144" height="326"/>
+    </clipPath>
+  </defs>
+  <g id="Shade" clip-path="url(#clip-Shade)">
+    <rect width="1144" height="326" fill="#fff"/>
+    <g id="Group_60" data-name="Group 60" transform="translate(95 224)">
+      <rect id="Rectangle_105" data-name="Rectangle 105" width="1240" height="299" transform="translate(-145 -224)" fill="url(#linear-gradient)"/>
+      <g id="Group_59" data-name="Group 59" transform="translate(-240 -1032)">
+        <ellipse id="Ellipse_47" data-name="Ellipse 47" cx="279" cy="312" rx="279" ry="312" transform="translate(830 958)" fill="#fff"/>
+        <ellipse id="Ellipse_48" data-name="Ellipse 48" cx="155" cy="136" rx="155" ry="136" transform="translate(356 971)" fill="#fff"/>
+        <ellipse id="Ellipse_49" data-name="Ellipse 49" cx="139.5" cy="82" rx="139.5" ry="82" transform="translate(633 1015)" fill="#fff"/>
+        <ellipse id="Ellipse_50" data-name="Ellipse 50" cx="169.5" cy="105.5" rx="169.5" ry="105.5" transform="translate(46 1042)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
