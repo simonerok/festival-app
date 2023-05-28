@@ -1,98 +1,83 @@
-import React from 'react';
-import { FestivalMap } from "./festivalMap";
-import FestivalPage from "@/pages/map";
-import { GetServerSideProps } from "next";
+import React, { useState } from 'react';
 import styles from "@/styles/Home.module.css";
 
+export function ScheduleCardJOTU({ scheduleData }) {
+  const [currentDay, setCurrentDay] = useState('mon'); // Initial day
 
+  const handleDayChange = (day) => {
+    setCurrentDay(day);
+  };
 
-export function ScheduleCardJOTU({scheduleData}){
-    console.log("jotunScene");
-    return (
-            <>
-                <div className={styles.scene_modal_sceneNavnOgTelt}>
-                    <img className={styles.scene_modal_telt} src="telt2.svg" alt="Telt2" />
-                    <h1>JOTU SCENE</h1>
-                </div>
+  const renderScene = (day) => {
+    return scheduleData.Jotunheim[day]
+      .filter((scene) => scene.act !== 'break')
+      .map((scene) => (
+        <section key={scene.start} value={scene.end}>
+          <h3 className={styles.scene_modal_BandName}>{scene.act}</h3>
+          <p className={styles.scene_modal_tidspunkt}>
+            From: {scene.start} - {scene.end}
+          </p>
+        </section>
+      ));
+  };
 
-                <div>
-                {scheduleData.Jotunheim.mon.map((scene) => {
-                    if (scene.act !== "break") {
-                        return (
-                            <section key={scene.start} value={scene.end}>
-                                 <h3 className={styles.scene_modal_BandName}>{scene.act}</h3>
-                                 <p className={styles.scene_modal_tidspunkt}>From: {scene.start} - {scene.end}</p>
-                              
-                            </section>
-                        );
-                    }
-                    return null;
-                })}
-            </div>
+  return (
+    <>
+      <div className={styles.scene_modal_sceneNavnOgTelt}>
+        <img className={styles.scene_modal_telt} src="telt2.svg" alt="Telt2" />
+        <h1>JOTUNHEIM SCENE</h1>
+      </div>
 
-            <div className={styles.scene_modal_tuesday}>
-            {scheduleData.Jotunheim.tue.map((scene) => (
-                <section key={scene.start} value={scene.end}>
-                    <h3 className={styles.scene_modal_BandName}>{scene.act}</h3>
-                    <p className={styles.scene_modal_tidspunkt}>From: {scene.start} - {scene.end}</p>
-            
-                </section>
-            ))}
-            </div>
+      <div>
+        <button
+          className={currentDay === 'mon' ? styles.active : ''}
+          onClick={() => handleDayChange('mon')}
+        >
+          Monday
+        </button>
+        <button
+          className={currentDay === 'tue' ? styles.active : ''}
+          onClick={() => handleDayChange('tue')}
+        >
+          Tuesday
+        </button>
+        <button
+          className={currentDay === 'wed' ? styles.active : ''}
+          onClick={() => handleDayChange('wed')}
+        >
+          Wednesday
+        </button>
+        <button
+          className={currentDay === 'thu' ? styles.active : ''}
+          onClick={() => handleDayChange('thu')}
+        >
+          Thursday
+        </button>
+        <button
+          className={currentDay === 'fri' ? styles.active : ''}
+          onClick={() => handleDayChange('fri')}
+        >
+          Friday
+        </button>
+        <button
+          className={currentDay === 'sat' ? styles.active : ''}
+          onClick={() => handleDayChange('sat')}
+        >
+          Saturday
+        </button>
+        <button
+          className={currentDay === 'sun' ? styles.active : ''}
+          onClick={() => handleDayChange('sun')}
+        >
+          Sunday
+        </button>
+      </div>
 
-             <div className={styles.scene_modal_wednesday}>
-            {scheduleData.Jotunheim.wed.map((scene) => (
-                <section key={scene.start} value={scene.end}>
-                    <h3 className={styles.scene_modal_BandName}>{scene.act}</h3>
-                    <p className={styles.scene_modal_tidspunkt}>From: {scene.start} - {scene.end}</p>
-            
-                </section>
-            ))}
-            </div>
-
-            <div className={styles.scene_modal_thursday}>
-            {scheduleData.Jotunheim.thu.map((scene) => (
-                <section key={scene.start} value={scene.end}>
-                    <h3 className={styles.scene_modal_BandName}>{scene.act}</h3>
-                    <p className={styles.scene_modal_tidspunkt}>From: {scene.start} - {scene.end}</p>
-            
-                </section>
-            ))}
-            </div>
-
-            <div className={styles.scene_modal_friday}>
-            {scheduleData.Jotunheim.fri.map((scene) => (
-                <section key={scene.start} value={scene.end}>
-                    <h3 className={styles.scene_modal_BandName}>{scene.act}</h3>
-                    <p className={styles.scene_modal_tidspunkt}>From: {scene.start} - {scene.end}</p>
-            
-                </section>
-            ))}
-            </div>
-
-            <div className={styles.scene_modal_saturday}>
-            {scheduleData.Jotunheim.sat.map((scene) => (
-                <section key={scene.start} value={scene.end}>
-                    <h3 className={styles.scene_modal_BandName}>{scene.act}</h3>
-                    <p className={styles.scene_modal_tidspunkt}>From: {scene.start} - {scene.end}</p>
-            
-                </section>
-            ))}
-            </div>
-            
-            <div className={styles.scene_modal_sunday}>
-            {scheduleData.Jotunheim.sun.map((scene) => (
-                <section key={scene.start} value={scene.end}>
-                    <h3 className={styles.scene_modal_BandName}>{scene.act}</h3>
-                    <p className={styles.scene_modal_tidspunkt}>From: {scene.start} - {scene.end}</p>
-            
-                </section>
-            ))}
-            </div>
-
-        </>
-        
-    );
+      <div className={styles.scene_modal_day}>
+        {renderScene(currentDay)}
+      </div>
+    </>
+  );
 }
 
 

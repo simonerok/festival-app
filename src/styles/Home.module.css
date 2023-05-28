@@ -3,7 +3,7 @@
 .overskrift {
     width: 100%;
     height: 100vh;
-    background-image: url("/gulPinkBaggrund.jpg");
+    background-image: url("/baggrundPinkOrange.png");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -12,7 +12,6 @@
   
   /* Additional styles for the overskrift class */
   .overskrift h1 {
-    animation: wavyText 2s infinite;
     color: white;
     font-size: 4rem;
     text-align: center;
@@ -20,46 +19,103 @@
   }
 
 
-  
-  
-
-
-.programKnap{
-    display: flex;
-    align-items: flex-end;
-    place-content: space-around;
-    background-color: orange;
-    width: 100vw; /* Set the width to 100% of the viewport */
-    height: 5rem;
+ /*PROGRAM component*/
+ .programKnap{
+    width: 50vw; /* Set the width to 100% of the viewport */
+    height: 2rem;
+    padding-block: 2rem;
     border: none;
-    font-size: 2.8rem;
-}
-
-
-
-.eventKnap{
+    font-size: 2rem;
     display: flex;
+    justify-content: center;
     align-items: center;
-    place-content: space-around;
-    background-color: blue;
-    width: 100vw; /* Set the width to 100% of the viewport */
-    height: 5rem;
-    margin-top: 3px;
-    border: none;
-    font-size: 2.8rem;
+      background-color: #a534a5;
 }
 
-.mapKnap{
+
+.programContainer {
     display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+    position: relative;
+  width: 100%;
+  height: 110vh;
+  background-color:#FDA0FB;
+  margin-top: -2rem;
+  
+  }
+
+  .imgContainer{
+    display: flex;
+    justify-content: center;
     align-items: flex-end;
-    justify-content: space-around;
-    background-color: turquoise;
-    width: 100vw; /* Set the width to 100% of the viewport */
-    height: 5rem;
+    margin-top: -67px;
+    overflow-x: hidden;
+  }
+
+  .skyggeProgram{
+    width: 200%;
+    transform: scaleY(-1);
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+  }
+
+  .skyggeProgram:hover {
+    transform: translateX(-17%); 
+
+  }
+
+  
+  /*Event component*/
+  .eventKnap{
+    width: 50vw; /* Set the width to 100% of the viewport */
+    height: 2rem;
     margin-top: 5px;
     border: none;
-    font-size: 2.8rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(153, 245, 242);
 }
+
+.eventContainer {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(82,182,232,1) 15%, rgba(244,222,64,1) 74%);
+  }
+
+
+
+  /*MAP component*/
+.mapKnap{
+    width: 50vw; /* Set the width to 100% of the viewport */
+    height: 2rem;
+    margin-top: 5px;
+    border: none;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 245, 153);
+}
+
+.mapContainer {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(245, 245, 153);
+  }
+
+
 
 .artist_column{
     display: flex;
@@ -87,7 +143,6 @@
 
 
 /*STYLING MAP*/ 
-
 /*oveerskrift + underoverskrift*/ 
 .map_top{
     background-color:#32A140;
@@ -112,26 +167,72 @@
 
 
 /*STYLING SCENE MODAL*/ 
+.scene_modal_body{
+    height: 100%;
+background-color: #762e75;
+}
 
-/*div omkring navnet på scnen og telt-svg*/ 
-  .scene_modal_sceneNavnOgTelt{
+/*scene navn - overskrift*/ 
+  .scene_modal_sceneNavn{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    justify-content: center;
+    color: yellow;
 }
 
-/*telt-svg*/ 
-img.scene_modal_telt {
-    height: 3rem !important;
+/*Knapper med dagene*/ 
+.scene_modal_knapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    margin-bottom: 7%;
+}
+.scene_modal_knapper button{
+    background-color: transparent;
+    border: none;
+    font-size: 0.5;
+    color: white;
+}
+.scene_modal_knapper button:hover{
+    text-decoration: underline;
+}
+.active{
+    text-decoration: underline;
 }
 
-/*artist/band navn*/ 
+/*flex container med navn og tid*/
+.navnTidContainer{
+    display: flex;
+    align-items: start; 
+    place-content: start space-around;
+    color: rgb(255, 255, 0);
+    border-top: 1px solid black;
+    margin-top: 5%;
+}
+/*kolonne til højre med band navn*/
+    .column {
+        flex: 1;
+        margin-left: 10%;
+        padding-right: 5%;
+        margin-top: 2%;
+    }
+
+/*Band name*/ 
 .scene_modal_BandName{
-    font-size: 2.2rem;
     text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-left: 10%;
+    font-weight: lighter;
 }
 
-/*spilletidspunkt*/ 
+/*tidspunkt*/
 .scene_modal_tidspunkt{
-    margin-top: -20px;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-left: 5%;
+    font-weight: 600;
 }
+
+
+
