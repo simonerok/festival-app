@@ -3,7 +3,7 @@
 .overskrift {
     width: 100%;
     height: 100vh;
-    background-image: url("/baggrundPinkOrange.png");
+background-color: aqua;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -142,6 +142,21 @@
 }
 
 
+
+.artister_forside{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.artist_forside {
+    font-size: 8vh;
+  line-height: 0rem;
+
+  }
+
+
+
 /*STYLING MAP*/ 
 /*oveerskrift + underoverskrift*/ 
 .map_top{
@@ -233,6 +248,61 @@ background-color: #762e75;
     margin-left: 5%;
     font-weight: 600;
 }
+
+
+
+
+.eventOverskrift{
+padding: 1rem;
+}
+
+.dropDownContainer {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .dropDownContainer h2{
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .eventMad{
+    background-color: #FDA0FB;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .eventFest{
+    background-color: yellow;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .eventDrikke{
+    background-color: aqua;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .eventKrea{
+    background-color: rgb(176, 225, 77);
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .mapDiv{
+    width: 100%;
+    height: 100vh;
+    background-image: url("/map.svg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
 
 
 

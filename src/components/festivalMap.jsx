@@ -27,20 +27,14 @@ const FestivalMap = ({onTeltClick}) => {
 
 
   return (
-    <div style={{ position: 'relative', height: '100%', }}>
+    <article className={styles.mapDiv} style={{ position: 'relative', height: '100%', }}>
       <img
-        src="/map.svg"
-        alt="Map"
-        style={{height: '100%', objectFit: 'cover',width: '100%' }}
-      />
-
-      <img 
         src="/telt1.svg"
         alt="Telt1"
         style={{
             ...getImageStyle(1),
-          top: '-2%',
-          left: '10%',
+          top: '4%',
+          left: '3%',
         }}
         onMouseOver={() => handleMouseOver(1)}
         onMouseOut={handleMouseOut}
@@ -73,8 +67,13 @@ const FestivalMap = ({onTeltClick}) => {
         onMouseOver={() => handleMouseOver(3)}
         onMouseOut={handleMouseOut}
         onClick={() => onTeltClick('Telt3')}
-      />   
-    </div>
+      />  
+
+     
+    </article>
+
+
+
   );
 };
 

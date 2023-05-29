@@ -19,10 +19,8 @@ export default function ArtistCard({ bandData }) {
 <div>
 {bandData.map((perBand) => (
           <section key={perBand.act} value={perBand.act}>
-            <div className={styles.artist_column}>
-                    <img src={perBand.logo} alt={perBand.logo}/>
+            <div className={styles.artist_forside}>
                     <h2>{perBand.name}</h2>
-                    <KnapArtist></KnapArtist>
            </div>
           </section>
         ))}

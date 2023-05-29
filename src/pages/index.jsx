@@ -8,6 +8,7 @@ import { MapKnap } from "@/components/mapKnap";
 import { useEffect } from 'react';
 
 
+
 export function Overskrift(){
   return(
     <article className={styles.overskrift}>
@@ -44,7 +45,7 @@ export default function Home({ bandData }) {
   return (
     <>
       <Overskrift ></Overskrift>
-      <ProgramKnap className="fadeIn"></ProgramKnap>
+      <ProgramKnap className="fadeIn" bandData={bandData}></ProgramKnap>
       <Banner className="fadeIn" bandData={bandData}></Banner>
       <EventKnap className="fadeIn"></EventKnap>
       <MapKnap className="fadeIn"></MapKnap>
