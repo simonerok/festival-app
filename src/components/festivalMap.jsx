@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FestivalPage from "@/pages/map";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
@@ -6,22 +6,30 @@ import Navigation from "@/components/Navigation";
 import { ScheduleCardMID } from "./Mid_modal";
 import { ScheduleCardJOTU } from "./Jotu_modal";
 import { ScheduleCardVAN } from "./Van_modal";
+
 export default function FestivalMap({ scheduleData }) {
   const [hoveredImg, setHoveredImg] = useState(null);
 
-  const [showMap, setShowMap] = useState(true);
+  const [showMap, setShowMap] = useState(true); //this is just to check for the showMap bool val
   const [selectedTent, setSelectedTent] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const containerWidth = 180;
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   function handleTentClick(tent) {
-    // setSelectedTent({ ...scheduleData });
-
-    // setShowMap(false);
-    // setShowModal(true);
-    // console.log(tent, showModal, showMap);
-    // if (showModal) {
-    //   changeModal(tent);
-    // }
     setSelectedTent(tent), setShowModal(true);
   }
 
@@ -35,10 +43,45 @@ export default function FestivalMap({ scheduleData }) {
 
   function getImageStyle(index) {
     const scale = hoveredImg === index ? 1.2 : 1;
+
+    // return {
+    //   position: "absolute",
+    //   width: "35%",
+
+    //   maxWidth: `${width}px`,
+    //   transform: `scale(${scale})`,
+    // };
+
+    // Define custom sizes and positions for each image
+    const imageStyles = {
+      1: {
+        width: windowWidth * 0.3,
+        height: windowHeight * 0.3,
+        left: windowWidth * 0.1,
+        top: windowHeight * 0.4,
+      },
+      2: {
+        width: windowWidth * 0.3,
+        height: windowHeight * 0.3,
+        left: windowWidth * 0.55,
+        top: windowHeight * 0.5,
+      },
+      3: {
+        width: windowWidth * 0.25,
+        height: windowHeight * 0.25,
+        left: windowWidth * 0.1,
+        top: windowHeight * 0.85,
+      },
+    };
+
+    const imageStyle = imageStyles[index];
+
     return {
       position: "absolute",
-      width: "100%",
-      maxWidth: "180px",
+      width: `${imageStyle.width}px`,
+      height: `${imageStyle.height}px`,
+      left: `${imageStyle.left}px`,
+      top: `${imageStyle.top}px`,
       transform: `scale(${scale})`,
     };
   }
