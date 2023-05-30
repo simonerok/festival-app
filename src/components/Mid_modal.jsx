@@ -10,7 +10,7 @@ export function ScheduleCardMID({
   handleCloseModal,
 }) {
   const [currentDay, setCurrentDay] = useState("mon"); // Initial day
-
+  //makes sure that if either showModal or selectedTent is false, the modal window doesn't get shown
   if (!showModal || !selectedTent) {
     return null;
   }

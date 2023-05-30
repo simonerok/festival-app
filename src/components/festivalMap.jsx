@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import { ScheduleCardMID } from "./Mid_modal";
 import { ScheduleCardJOTU } from "./Jotu_modal";
+import { ScheduleCardVAN } from "./Van_modal";
 export default function FestivalMap({ scheduleData }) {
   const [hoveredImg, setHoveredImg] = useState(null);
 
@@ -13,14 +14,15 @@ export default function FestivalMap({ scheduleData }) {
   const [showModal, setShowModal] = useState(false);
 
   function handleTentClick(tent) {
-    setSelectedTent({ ...scheduleData });
+    // setSelectedTent({ ...scheduleData });
 
-    setShowMap(false);
-    setShowModal(true);
-    console.log(tent, showModal, showMap);
-    if (showModal) {
-      changeModal(tent);
-    }
+    // setShowMap(false);
+    // setShowModal(true);
+    // console.log(tent, showModal, showMap);
+    // if (showModal) {
+    //   changeModal(tent);
+    // }
+    setSelectedTent(tent), setShowModal(true);
   }
 
   function handleMouseOver(index) {
@@ -40,23 +42,33 @@ export default function FestivalMap({ scheduleData }) {
       transform: `scale(${scale})`,
     };
   }
-  function changeModal(tent) {
-    if (tent === "Telt1") {
-      console.log("dette er ", tent);
 
-      !showMap && <ScheduleCardMID />;
-    }
-  }
   return (
     <>
-      {" "}
-      <ScheduleCardMID
-        scheduleData={scheduleData}
-        selectedTent={selectedTent}
-        showModal={showModal}
-        handleCloseModal={setShowModal}
-      />
-      {!showModal && (
+      {showModal ? (
+        selectedTent === "Telt1" ? (
+          <ScheduleCardMID
+            scheduleData={scheduleData}
+            selectedTent={selectedTent}
+            showModal={showModal}
+            handleCloseModal={setShowModal}
+          />
+        ) : selectedTent === "Telt2" ? (
+          <ScheduleCardJOTU
+            scheduleData={scheduleData}
+            selectedTent={selectedTent}
+            showModal={showModal}
+            handleCloseModal={setShowModal}
+          />
+        ) : (
+          <ScheduleCardVAN
+            scheduleData={scheduleData}
+            selectedTent={selectedTent}
+            showModal={showModal}
+            handleCloseModal={setShowModal}
+          />
+        )
+      ) : (
         <div className={styles.mapDiv}>
           <div className={styles.nav}>
             <Navigation></Navigation>
@@ -112,27 +124,7 @@ export default function FestivalMap({ scheduleData }) {
             onClick={() => handleTentClick("Telt3")}
           />
         </div>
-      )}
-      {/* {showModal ? (
-        <ScheduleCardMID scheduleData={scheduleData} />
-      ) : (
-        <ScheduleCardJOTU scheduleData={scheduleData} />
-      )} */}
-      {/* {onTeltClick.selectedTent === "Telt1" ? (
-        <ScheduleCardMID
-          scheduleData={scheduleData}
-          showModal={showModal}
-          handleCloseModal={setShowModal}
-        />
-      ) : (
-        <ScheduleCardJOTU
-          scheduleData={scheduleData}
-          handleCloseModal={setShowModal}
-        />
-      )} */}
+      )}{" "}
     </>
   );
 }
-
-/*   :
-  <ScheduleCardVAN scheduleData={scheduleData} handleCloseModal={setShowModal} /> */
