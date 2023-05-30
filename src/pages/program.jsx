@@ -11,7 +11,7 @@ export default function Program({ scheduleData, bandData }) {
   const [showModal, setShowModal] = useState(false);
 
   // callback function that is called when a band event is clicked. It takes the selected bandEvent as a parameter.
-  const handleBandSelection = (bandEvent, day) => {
+  function handleBandSelection (bandEvent, day){
     let stage = scheduleData.Jotunheim[day].filter((act) => act.act === bandEvent.act).length ? "Jotunheim" : false;
     if (!stage) {
       stage = scheduleData.Midgard[day].filter((act) => act.act === bandEvent.act).length ? "Midgard" : false;
@@ -28,7 +28,7 @@ export default function Program({ scheduleData, bandData }) {
       bandInfo,
     });
     setShowModal(true);
-  };
+  }
 
   const Midmon = scheduleData.Midgard.mon;
   const Midtue = scheduleData.Midgard.tue;

@@ -4,31 +4,32 @@ import styles from "@/styles/Home.module.css";
 export function ScheduleCardJOTU({ scheduleData }) {
   const [currentDay, setCurrentDay] = useState('mon'); // Initial day
 
-  const handleDayChange = (day) => {
+  function handleDayChange (day) {
     setCurrentDay(day);
-  };
+  }
 
-  const renderScene = (day) => {
+  function renderScene (day) {
     return scheduleData.Jotunheim[day]
       .filter((scene) => scene.act !== 'break')
       .map((scene) => (
-        <section key={scene.start} value={scene.end}>
-          <h3 className={styles.scene_modal_BandName}>{scene.act}</h3>
+        <section className={styles.navnTidContainer} key={scene.start} value={scene.end}>
           <p className={styles.scene_modal_tidspunkt}>
-            From: {scene.start} - {scene.end}
+            {scene.start} <br/> {scene.end}
           </p>
+          <div className={styles.column}>
+            <h3 className={styles.scene_modal_BandName}>{scene.act}</h3>
+          </div>
         </section>
       ));
-  };
+  }
 
   return (
-    <>
-      <div className={styles.scene_modal_sceneNavnOgTelt}>
-        <img className={styles.scene_modal_telt} src="telt2.svg" alt="Telt2" />
-        <h1>JOTUNHEIM SCENE</h1>
+    <div className={styles.scene_modal_body}>
+      <div className={styles.scene_modal_sceneNavn}>
+        <h1>JOTUNHEIM</h1>
       </div>
 
-      <div>
+      <div className={styles.scene_modal_knapper}>
         <button
           className={currentDay === 'mon' ? styles.active : ''}
           onClick={() => handleDayChange('mon')}
@@ -76,10 +77,9 @@ export function ScheduleCardJOTU({ scheduleData }) {
       <div className={styles.scene_modal_day}>
         {renderScene(currentDay)}
       </div>
-    </>
+    </div>
   );
 }
-
 
 
   

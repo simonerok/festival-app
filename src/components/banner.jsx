@@ -1,7 +1,7 @@
 import Marquee from "react-fast-marquee";
 
 //Marquee er react component som kører css animationer 
-const Banner = ({bandData}) => {
+export default function Banner ({bandData}){
     return (
         <div className="banner">
           {bandData.length > 0 && (
@@ -13,6 +13,5 @@ const Banner = ({bandData}) => {
           )}
         </div>
       );
-    };
+    }
     
-    export default Banner;

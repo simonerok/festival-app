@@ -224,7 +224,7 @@ export default function StickyHeadTable({ schedule }) {
       </div>
       <h2 className={stylesSchedule.dayName}>{day}</h2>
       <section className={stylesSchedule.scheduleSection}>
-        <div>
+        <div className={stylesSchedule.schedule_sceneNavne}>
           <p>Midgard</p> <br />
           <p>Vanaheim</p> <br />
           <p>Jotunheim</p>

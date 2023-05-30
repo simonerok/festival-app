@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 
 export function EventKnap(){
     return(
-  
       <div className={styles.eventContainer}>
         <h2 className="fadeIn">THIS WEEKS EVENTS</h2>
         <Link href='/events'>

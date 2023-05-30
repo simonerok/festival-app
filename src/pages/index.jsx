@@ -6,17 +6,22 @@ import { ProgramKnap } from "@/components/programKnap";
 import { EventKnap } from "@/components/eventsKnap";
 import { MapKnap } from "@/components/mapKnap";
 import { useEffect } from 'react';
-
+import Navigation from "@/components/Navigation";
 
 
 export function Overskrift(){
   return(
+    <>
     <article className={styles.overskrift}>
+    <Navigation></Navigation>
     <h1 className="fadeIn">FOO FESTIVALLL</h1>
   </article>
+  </>
   );
 }
 
+/*giver tekster der skal animeres en class "fadeIN" 
+og sætter elements til at være alle elementer med denne class*/
 
 export default function Home({ bandData }) {
   useEffect(() => {

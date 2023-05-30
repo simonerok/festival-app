@@ -1,12 +1,15 @@
 import styles from "@/styles/Home.module.css";
 import React, { useState } from 'react';
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
 
 
-const Events = () => {
+export default function Events () {
     const [showMad, setShowMad] = useState(false);
     const [showFest, setShowFest] = useState(false);
     const [showDrikke, setShowDrikke] = useState(false);
     const [showKrea, setShowKrea] = useState(false);
+  
   
     // Add event handlers to toggle the visibility of each div
     const toggleMad = () => setShowMad(!showMad);
@@ -16,6 +19,14 @@ const Events = () => {
   
     return (
         <>
+        <div className={styles.nav}>
+        <Link href='/'>
+        <button className={styles.backToIndex}>
+          Back </button>
+        </Link>
+        <Navigation></Navigation>
+        </div>
+       
         <h1 className={styles.eventOverskrift}>HAPPENING THIS WEEK</h1>
       <section className={styles.dropDownContainer}>
         <div className={styles.eventMad} onClick={toggleMad}>
@@ -65,7 +76,5 @@ const Events = () => {
       </section>
       </>
     );
-  };
-  
-  export default Events;
+  }
        

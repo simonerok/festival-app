@@ -12,6 +12,12 @@
   /* line-height: 6rem; */
   text-transform: uppercase;
 }
+
+
+.schedule_sceneNavne{
+  margin-top: 75px;
+  margin-inline-start: -10px;
+}
 .link {
   font-size: var(--h3);
   -webkit-text-stroke: 1.5px black;

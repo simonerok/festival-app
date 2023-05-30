@@ -1,12 +1,52 @@
 
+/* Nav menu */
+.navMenu {
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+  }
+  
+  /* BURGER */
+  /* back icon style */
+  .backIcon {
+    justify-content: end;
+    display: flex;
+place-content: end;
+  }
+
+  
+  .burgerIcon {
+    /* Add your custom styles here */
+    background-color: transparent;
+  }
+  .MuiBox-root{
+    display: flex;
+    place-content: end;
+  }
+  
+  .burgerIcon:hover,
+  button.burgerIcon:hover {
+    background-color: transparent;
+  }
+
+  .MuiToolbar-root{
+    place-content: end;
+  }
+
+.nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+}
+
+
 /* Style for the overskrift class */
 .overskrift {
-    width: 100%;
-    height: 100vh;
-background-color: aqua;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  background-color: aqua;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center center;
+   height: 100vh;
   }
   
   
@@ -60,7 +100,6 @@ background-color: aqua;
     transform: translateX(0);
     transition: transform 0.5s ease;
   }
-
   .skyggeProgram:hover {
     transform: translateX(-17%); 
 
@@ -79,7 +118,6 @@ background-color: aqua;
     align-items: center;
     background-color: rgb(153, 245, 242);
 }
-
 .eventContainer {
     display: flex;
   justify-content: center;
@@ -179,6 +217,20 @@ background-color: aqua;
     margin-top: -15px
 }
 
+.telt1{
+    top: 12%;
+    left: 3%;
+}
+
+.telt2{
+    top: 12%;
+    left: 57%;
+}
+
+.telt3{
+    top:37%;
+    left:63%;
+}
 
 
 /*STYLING SCENE MODAL*/ 
@@ -250,7 +302,11 @@ background-color: #762e75;
 }
 
 
-
+.backToIndex{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
 
 .eventOverskrift{
 padding: 1rem;
@@ -269,6 +325,9 @@ padding: 1rem;
   .dropDownContainer h2{
     font-size: 4rem;
     text-align: center;
+  }
+  .dropDownContainer h2:hover{
+    scale: 120%;
   }
 
   .eventMad{
@@ -295,14 +354,12 @@ padding: 1rem;
     max-width: 800px;
   }
   
-  .mapDiv{
-    width: 100%;
-    height: 100vh;
-    background-image: url("/map.svg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
 
 
 
+
+
+
+
+  
+ 
