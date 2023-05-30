@@ -44,14 +44,6 @@ export default function FestivalMap({ scheduleData }) {
   function getImageStyle(index) {
     const scale = hoveredImg === index ? 1.2 : 1;
 
-    // return {
-    //   position: "absolute",
-    //   width: "35%",
-
-    //   maxWidth: `${width}px`,
-    //   transform: `scale(${scale})`,
-    // };
-
     // Define custom sizes and positions for each image
     const imageStyles = {
       1: {
