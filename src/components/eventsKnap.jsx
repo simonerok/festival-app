@@ -7,7 +7,7 @@ export function EventKnap(){
       <div className={styles.eventContainer}>
         <h2 className="fadeIn">THIS WEEKS EVENTS</h2>
         <Link href='/events'>
-          <button className={styles.eventKnap}> EVENTS</button>
+          <button className={styles.eventKnap}> SHOW ME</button>
         </Link>
       </div>
     );

@@ -51,7 +51,6 @@ export default function Home({ bandData }) {
     <>
       <Overskrift ></Overskrift>
       <ProgramKnap className="fadeIn" bandData={bandData}></ProgramKnap>
-      <Banner className="fadeIn" bandData={bandData}></Banner>
       <EventKnap className="fadeIn"></EventKnap>
       <MapKnap className="fadeIn"></MapKnap>
     </>

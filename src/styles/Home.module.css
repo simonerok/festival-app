@@ -1,48 +1,58 @@
-
+/* NAVIGATION */
 /* Nav menu */
-.navMenu {
+.logo {
+    font-family: var(--heading);
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: var(--p);
+  }
+  .navMenu {
     background-color: transparent;
     box-shadow: none;
-    display: flex;
+  }
+  .navStyleBtn1 {
+    border: solid 2px black;
+    padding: 5px;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    font-size: 2rem;
+    font-family: var(--paragraph);
+    text-decoration: none;
+    color: black;
+  }
+  .navStyleBtn2 {
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    font-size: 2rem;
+    font-family: var(--paragraph);
+    text-decoration: none;
+    color: black;
+  }
+  .navStyleBtn1:hover,
+  .navStyleBtn2:hover {
+    font-weight: bold;
+    border: solid 3px black;
   }
   
-  /* BURGER */
-  /* back icon style */
-  .backIcon {
-    justify-content: end;
+  .navContainer {
     display: flex;
-place-content: end;
+    justify-content: space-between;
+    padding-block: 2rem;
   }
-
-  
-  .burgerIcon {
-    /* Add your custom styles here */
-    background-color: transparent;
-  }
-  .MuiBox-root{
+  .flexBox {
     display: flex;
-    place-content: end;
+    gap: 1rem;
   }
   
-  .burgerIcon:hover,
-  button.burgerIcon:hover {
-    background-color: transparent;
-  }
-
-  .MuiToolbar-root{
-    place-content: end;
-  }
-
-.nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;  
-}
-
 
 /* Style for the overskrift class */
 .overskrift {
-  background-color: aqua;
+  background-color: #99E854;
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center center;
@@ -52,25 +62,22 @@ place-content: end;
   
   /* Additional styles for the overskrift class */
   .overskrift h1 {
-    color: white;
+    color: #C760E2;
     font-size: 4rem;
     text-align: center;
-    padding-top: 40vh;
+    padding-top: 15vh;
   }
 
 
  /*PROGRAM component*/
- .programKnap{
+ .programKnap {
     width: 50vw; /* Set the width to 100% of the viewport */
-    height: 2rem;
-    padding-block: 2rem;
+    margin-top: 5px;
     border: none;
     font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      background-color: #a534a5;
-}
+    text-align: center;
+    background-color: white;
+  }
 
 
 .programContainer {
@@ -78,23 +85,29 @@ place-content: end;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-    position: relative;
+position: relative;
   width: 100%;
   height: 110vh;
-  background-color:#FDA0FB;
-  margin-top: -2rem;
-  
-  }
+  background-color:#0039C6;
+ 
+  color: #FFB928;
+}
 
-  .imgContainer{
+.programContainer h2{
+    font-size: 4rem;
+    text-align: center;
+    padding-inline: 5%;
+}
+
+ /*
+.imgContainer{
     display: flex;
     justify-content: center;
     align-items: flex-end;
     margin-top: -67px;
     overflow-x: hidden;
-  }
-
-  .skyggeProgram{
+}
+ .skyggeProgram{
     width: 200%;
     transform: scaleY(-1);
     transform: translateX(0);
@@ -102,56 +115,70 @@ place-content: end;
   }
   .skyggeProgram:hover {
     transform: translateX(-17%); 
-
-  }
+  }*/
 
   
   /*Event component*/
-  .eventKnap{
+  .eventContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #C760E2;
+  }
+  
+  .eventContainer h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #99E854;
+    font-size: 4.5rem;
+  }
+  
+  .eventKnap {
     width: 50vw; /* Set the width to 100% of the viewport */
-    height: 2rem;
     margin-top: 5px;
     border: none;
     font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(153, 245, 242);
-}
-.eventContainer {
-    display: flex;
-  justify-content: center;
-  align-items: center;
-    position: relative;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(0deg, rgba(82,182,232,1) 15%, rgba(244,222,64,1) 74%);
+    text-align: center;
+    background-color: white;
   }
 
 
 
   /*MAP component*/
-.mapKnap{
+  .mapContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #49F0D3;
+  }
+  
+  .mapContainer svg {
+    margin-bottom: 10px;
+  }
+  .mapContainer h2 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: #FA4DDD;
+  }
+  
+  .mapKnap {
     width: 50vw; /* Set the width to 100% of the viewport */
-    height: 2rem;
     margin-top: 5px;
     border: none;
     font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(245, 245, 153);
-}
-
-.mapContainer {
-    display: flex;
-  justify-content: center;
-  align-items: center;
-    position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(245, 245, 153);
+    text-align: center;
+    background-color: white;
   }
+
+
 
 
 
@@ -190,7 +217,6 @@ place-content: end;
 .artist_forside {
     font-size: 8vh;
   line-height: 0rem;
-
   }
 
 
@@ -308,50 +334,36 @@ background-color: #762e75;
     left: 10px;
 }
 
+
 .eventOverskrift{
 padding: 1rem;
 }
 
-.dropDownContainer {
-    margin-top: 5%;
+
+
+  .eventCard {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
-  .dropDownContainer h2{
-    font-size: 4rem;
-    text-align: center;
-  }
-  .dropDownContainer h2:hover{
-    scale: 120%;
-  }
-
-  .eventMad{
-    background-color: #FDA0FB;
-    width: 100%;
-    max-width: 800px;
-  }
-
-  .eventFest{
-    background-color: yellow;
-    width: 100%;
-    max-width: 800px;
-  }
-
-  .eventDrikke{
-    background-color: aqua;
-    width: 100%;
-    max-width: 800px;
+    border: 1px solid #000;
+    background-color: #f0f0f0;
+    padding-block: 5%;
+    padding-inline: 7%;
+    max-width: 300px; /* Adjust this value as needed */
+    margin: 0 auto; /* To center the card horizontally */
   }
   
-  .eventKrea{
-    background-color: rgb(176, 225, 77);
-    width: 100%;
-    max-width: 800px;
+  .eventCard img {
+    height: 400px;
+    max-width: 100%;
+  }
+  
+  .eventCard h2 {
+    margin-top: 10px;
+  }
+  
+  .eventCard p {
+    margin-top: 5px;
   }
   
 

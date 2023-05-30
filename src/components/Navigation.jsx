@@ -13,27 +13,36 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <AppBar position="static" className={styles.navMenu}>
-        <Toolbar className={styles.landingButtons}>
-          {/*Box hider navmenuen i mobil xs er en mediaQuiery */}
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <Link href="/program">
-              <button>Program</button>
-            </Link>
-            <Link href="/map">
-              <button>map</button>
-            </Link>
-            <Link href="/events">
-              <button>events</button>
-            </Link>
-          </Box>
-          
-          {/* smUp betyder at den skal vise burgermenuen */}
+      <AppBar position="sticky" className={styles.navMenu}>
+        <Toolbar className={styles.navContainer}>
+          <Link className={styles.logo} href="./">
+            FOO <br /> FESTIVAL
+          </Link>
+          <div className={styles.flexBox}>
+            {/*Box hider navmenuen i mobil xs er en mediaQuiery */}
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              {/* Her indsættes vores menuelementer */}
+              <Link className={styles.navStyleBtn1} href="/program">
+                PROGRAM
+              </Link>
+            </Box>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              <Link className={styles.navStyleBtn2} href="/events">
+                EVENTS
+              </Link>
+            </Box>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              <Link className={styles.navStyleBtn2} href="/map">
+                MAP
+              </Link>
+            </Box>
+          </div>
+          {/* Dette gør at burgermenuen forsvinder igen når skærmen bliver større */}
           {/* Burger menu */}
           <Box display={{ xs: "block", sm: "none" }}>
-            <IconButton >
+            <IconButton className={styles.burgerIcon}>
               {/* Burger ikon */}
-              <MenuIcon className={styles.burgerIcon} onClick={() => setOpen(true)} />
+              <MenuIcon onClick={() => setOpen(true)} />
             </IconButton>
           </Box>
         </Toolbar>
@@ -43,21 +52,22 @@ export default function Navigation() {
             <ChevronRightIcon onClick={() => setOpen(false)} />
           </IconButton>
           <Divider></Divider>
+          {/* Her indsættes vores menuelementer */}
           <List>
             <ListItem>
-            <Link href="/program">
-              <button>Program</button>
-            </Link>
+              <Link href="/program">
+                <button>PROGRAM</button>
+              </Link>
             </ListItem>
             <ListItem>
-            <Link href="/map">
-              <button>map</button>
-            </Link>
+              <Link href="/events">
+                <button>EVENTS</button>
+              </Link>
             </ListItem>
             <ListItem>
-            <Link href="/events">
-              <button>events</button>
-            </Link>
+              <Link href="/map">
+                <button>MAP</button>
+              </Link>
             </ListItem>
           </List>
         </SwipeableDrawer>

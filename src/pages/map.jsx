@@ -12,6 +12,7 @@ export default function FestivalPage({ scheduleData }) {
 
   return (
     <>
+
       <div>
         {showMap ? (
           <FestivalMap scheduleData={scheduleData} />
