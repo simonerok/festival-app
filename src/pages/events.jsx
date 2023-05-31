@@ -11,17 +11,17 @@ export default function Events () {
         <h1 className={styles.eventOverskrift}>EVENTS THIS WEEK</h1>
         <article className={styles.eventCard}>
           <img src="/baggrundPinkOrange.jpg" alt="billede1" />
-          <h2> overskrift</h2>
+          <h3> overskrift</h3>
           <p>indsæt en kort brødtekst her</p>
         </article>
         <article className={styles.eventCard}>
           <img src="/baggrundPinkOrange.jpg" alt="billede1" />
-          <h2> overskrift</h2>
+          <h3> overskrift</h3>
           <p>indsæt en kort brødtekst her</p>
         </article>
         <article className={styles.eventCard}>
           <img src="/baggrundPinkOrange.jpg" alt="billede1" />
-          <h2> overskrift</h2>
+          <h3> overskrift</h3>
           <p>indsæt en kort brødtekst her</p>
         </article>
       </section>

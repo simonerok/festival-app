@@ -1,6 +1,10 @@
 /* PROGRAM SECTION  */
 
- 
+.program_body{
+  background: rgb(202, 88, 231);
+  background: linear-gradient(180deg, rgba(202, 88, 231, 1) 15%, rgba(235, 38, 60, 1) 45%, rgba(232, 176, 82, 1) 82%);
+}
+
 .programContainer h2 {
   color: white;
   margin-bottom: 1rem;

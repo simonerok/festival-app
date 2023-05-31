@@ -2,7 +2,6 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   margin-block-start: 0px;
-  overflow-x: hidden;
 }
 
 .fadeIn {
@@ -50,7 +49,7 @@ button:hover {
   --heading: condor-extended, sans-serif;
   --paragraph: eurostile, sans-serif;
   --color-default: #000000;
-  --h1: clamp(2.5rem, 0.7857rem + 7.3143vw, 6.5rem);
+  --h1: clamp(2.5rem, 0.7857rem + 7.3143vw, 2.7rem);
   --h2: clamp(2.5rem, 1.4286rem + 4.5714vw, 5rem);
   --h3: clamp(2.5rem, 1.8571rem + 2.7429vw, 4rem);
   --h4: clamp(2.5rem, 2.3714rem + 0.5486vw, 2.8rem);
@@ -88,3 +87,16 @@ button:hover {
 }
 
 
+/*SCHEDULE*/
+.css-1q1u3t4-MuiTableRow-root{
+  height: 125px;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-family: var(--heading);
+    font-size: 2.7rem;
+    text-align: center;
+  }
+
+}

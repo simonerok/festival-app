@@ -169,7 +169,7 @@ export default function StickyHeadTable({ schedule }) {
     return results;
   }
   return (
-    <>
+    <div className={stylesSchedule.schedule_body}>
       <h1 className={stylesSchedule.scheduleHeading}>Schedule</h1>
       <Link className={stylesSchedule.link} href="/program">
         / Program
@@ -239,7 +239,7 @@ export default function StickyHeadTable({ schedule }) {
           </TableContainer>
         </Paper>
       </section>
-    </>
+    </div>
   );
 }
 

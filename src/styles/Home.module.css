@@ -50,8 +50,14 @@
   
 
 /* LANDING PAGE - OVERSKRIFT */
+
+.index_body{
+    overflow-x: hidden;
+    background: rgb(75, 242, 211);
+  background: linear-gradient(180deg, rgba(75, 242, 211, 1) 15%, rgba(166, 235, 38, 1) 48%, rgba(1, 54, 231, 1) 82%);
+}
+
 .overskrift {
-  
     background-size: contain;
    background-repeat: no-repeat;
    background-position: center center;
@@ -60,7 +66,6 @@
 
   .overskrift h1 {
     color: #C760E2;
-    font-size: 4rem;
     text-align: center;
     padding-top: 15vh;
   }
@@ -81,7 +86,6 @@
 }
 
 .programContainer h2{
-    font-size: 4rem;
     text-align: center;
     padding-inline: 5%;
 }
@@ -112,7 +116,7 @@
     text-align: center;
     margin-bottom: 35px;
     color: #99E854;
-    font-size: 4.5rem;
+    margin-inline: 10px;
 }
   
 .eventKnap {
@@ -138,7 +142,6 @@
 }
 
 .mapContainer h2 {
-    font-size: 4rem;
     margin-bottom: 10px;
     color: #FA4DDD;
 }

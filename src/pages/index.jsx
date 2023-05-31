@@ -46,12 +46,12 @@ export default function Home({ bandData }) {
   }, []);
 
   return (
-    <>
+    <div className={styles.index_body}>
       <Overskrift></Overskrift>
       <ProgramSection className="fadeIn" bandData={bandData}></ProgramSection>
       <EventSection className="fadeIn"></EventSection>
       <MapSection className="fadeIn"></MapSection>
-    </>
+    </div>
   );
 }
 
