@@ -30,25 +30,22 @@ export default function Navigation() {
           </Link>
           <div className={styles.flexBox}>
             {/*Box hider navmenuen i mobil xs er en mediaQuiery */}
-            <List>
-              <ListItem>
-                <Link className={styles.navStyleBtn2} href="/program">
-                  PROGRAM
-                </Link>
-              </ListItem>
-              <ListItem>
-                {/* Her indsættes vores menuelementer */}
-                <Link className={styles.navStyleBtn2} href="/events">
-                  EVENTS
-                </Link>
-              </ListItem>
-              <ListItem>
-                {/* Her indsættes vores menuelementer */}
-                <Link className={styles.navStyleBtn2} href="/map">
-                  MAP
-                </Link>
-              </ListItem>
-            </List>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              {/* Her indsættes vores menuelementer */}
+              <Link className={styles.navStyleBtn1} href="/program">
+                PROGRAM
+              </Link>
+            </Box>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              <Link className={styles.navStyleBtn2} href="/events">
+                EVENTS
+              </Link>
+            </Box>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              <Link className={styles.navStyleBtn2} href="/map">
+                MAP
+              </Link>
+            </Box>
           </div>
           {/* Dette gør at burgermenuen forsvinder igen når skærmen bliver større */}
           {/* Burger menu */}
@@ -73,18 +70,20 @@ export default function Navigation() {
           {/* Her indsættes vores menuelementer */}
           <List>
             <ListItem>
-              <Link href="/program">
-                <button>PROGRAM</button>
+              <Link className={styles.navStyleBtn2} href="/program">
+                PROGRAM
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="/events">
-                <button>EVENTS</button>
+              {/* Her indsættes vores menuelementer */}
+              <Link className={styles.navStyleBtn2} href="/events">
+                EVENTS
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="/map">
-                <button>MAP</button>
+              {/* Her indsættes vores menuelementer */}
+              <Link className={styles.navStyleBtn2} href="/map">
+                MAP
               </Link>
             </ListItem>
           </List>
