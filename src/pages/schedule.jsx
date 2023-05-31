@@ -172,7 +172,7 @@ export default function StickyHeadTable({ schedule }) {
   }
   return (
     <>
-    <Navigation></Navigation>
+ 
     <div className={stylesSchedule.schedule_body}>
         <Navigation></Navigation>
       <h1 className={stylesSchedule.scheduleHeading}>Schedule</h1>
