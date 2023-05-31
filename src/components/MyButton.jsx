@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button";
-import styles from "../styles/Form.module.css";
+import styles from "@/styles/Home.module.css";
 
 export default function MyButton({ onClick, children }) {
   return (
@@ -25,4 +25,3 @@ export default function MyButton({ onClick, children }) {
     </Button>
   );
 }
-s

@@ -39,7 +39,9 @@
   }
   
   .navContainer {
+    position: sticky;
     display: flex;
+    z-index: 100;
     justify-content: space-between;
     padding-block: 2rem;
   }
@@ -55,6 +57,7 @@
     overflow-x: hidden;
     background: rgb(75, 242, 211);
   background: linear-gradient(180deg, rgba(75, 242, 211, 1) 15%, rgba(166, 235, 38, 1) 48%, rgba(1, 54, 231, 1) 82%);
+
 }
 
 .overskrift {

@@ -2,6 +2,7 @@ import stylesSchedule from "../styles/Schedule.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import MyButton from "@/components/MyButton";
 
 // MUI
 
@@ -171,9 +172,9 @@ export default function StickyHeadTable({ schedule }) {
   }
   return (
     <>
-
-    <div className={stylesSchedule.schedule_body}>
     <Navigation></Navigation>
+    <div className={stylesSchedule.schedule_body}>
+        <Navigation></Navigation>
       <h1 className={stylesSchedule.scheduleHeading}>Schedule</h1>
       <Link className={stylesSchedule.link} href="/program">
         / Program
@@ -181,27 +182,27 @@ export default function StickyHeadTable({ schedule }) {
       {/* schedule timetable */}
       {/* BUTTONS TO CHOOSE DAYS */}
       <div className={stylesSchedule.days}>
-        <button onClick={changeDay} value="Monday">
+        <MyButton onClick={changeDay} value="Monday">
           Monday
-        </button>
-        <button onClick={changeDay} value="Tuesday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Tuesday">
           Tuesday
-        </button>
-        <button onClick={changeDay} value="Wednesday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Wednesday">
           Wednesday
-        </button>
-        <button onClick={changeDay} value="Thursday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Thursday">
           Thursday
-        </button>
-        <button onClick={changeDay} value="Friday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Friday">
           Friday
-        </button>
-        <button onClick={changeDay} value="Saturday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Saturday">
           Saturday
-        </button>
-        <button onClick={changeDay} value="Sunday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Sunday">
           Sunday
-        </button>
+        </MyButton>
       </div>
       <h2 className={stylesSchedule.dayName}>{day}</h2>
       <section className={stylesSchedule.scheduleSection}>
