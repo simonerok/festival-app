@@ -1,6 +1,7 @@
 import stylesSchedule from "../styles/Schedule.module.css";
 import { useState } from "react";
 import Link from "next/link";
+import Navigation from "@/components/Navigation";
 
 // MUI
 
@@ -169,7 +170,10 @@ export default function StickyHeadTable({ schedule }) {
     return results;
   }
   return (
+    <>
+
     <div className={stylesSchedule.schedule_body}>
+    <Navigation></Navigation>
       <h1 className={stylesSchedule.scheduleHeading}>Schedule</h1>
       <Link className={stylesSchedule.link} href="/program">
         / Program
@@ -240,6 +244,7 @@ export default function StickyHeadTable({ schedule }) {
         </Paper>
       </section>
     </div>
+    </>
   );
 }
 
