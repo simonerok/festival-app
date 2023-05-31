@@ -23,6 +23,13 @@
     z-index: -2;
 }*/
 
+.pil_forside{
+  position: absolute;
+  top: 80% ;
+  left: 45%;
+}
+
+
 img {
   width: auto;
   height: 10rem;
@@ -86,6 +93,11 @@ button:hover {
   cursor: pointer;
 }
 
+/*SCHEDULE*/
+.css-1q1u3t4-MuiTableRow-root{
+  height: 125px;
+}
+
 /* FOOTER */
 .footerContainer {
   display: flex;
@@ -94,10 +106,14 @@ button:hover {
   padding: 2rem 4rem;
 }
 
+.footerContainer p {
+  font-size: 1rem;
+}
 .footerContainer h4 {
   font-weight: bold;
-  font-size: var(--p);
+  font-size: 1rem;
 }
+
 .footerInfoBox {
   display: flex;
   gap: 3rem;
@@ -107,22 +123,28 @@ button:hover {
   font-weight: bold;
 }
 
-/*SCHEDULE*/
-.css-1q1u3t4-MuiTableRow-root{
-  height: 125px;
+.footerInfoBox div{
+  min-width: 500px;
+}
+.footerInfoBox p{
+line-height: 1rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
+  h2 {
+
+    font-size: 2.3rem;
+  
+  }
   h1 {
     font-family: var(--heading);
-    font-size: 2.7rem;
+    font-size: 2.3rem;
     text-align: center;
   }
-@media (max-width: 750px) {
   .footerContainer,
   .footerInfoBox {
     flex-wrap: wrap;
-    row-gap: 2rem;
+    row-gap: 0rem;
   }
 }
-}
+

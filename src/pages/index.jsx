@@ -5,6 +5,7 @@ import { EventSection } from "@/components/eventSection";
 import { MapSection } from "@/components/mapSection";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/footer";
 
 
 export function Overskrift() {
@@ -12,8 +13,11 @@ export function Overskrift() {
     <>
       <article className={styles.overskrift}>
         <Navigation></Navigation>
-        <h1 className="fadeIn">FOO FESTIVALLL</h1>
+        <h2 className="fadeIn">FOO <br/> FESTIVAL</h2>
       </article>
+      <svg className="pil_forside" xmlns="http://www.w3.org/2000/svg" width="50" height="200" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+</svg>
     </>
   );
 }
@@ -51,6 +55,7 @@ export default function Home({ bandData }) {
       <ProgramSection className="fadeIn" bandData={bandData}></ProgramSection>
       <EventSection className="fadeIn"></EventSection>
       <MapSection className="fadeIn"></MapSection>
+      <Footer></Footer>
     </div>
   );
 }

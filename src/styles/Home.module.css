@@ -64,7 +64,7 @@
    height: 100vh;
   }
 
-  .overskrift h1 {
+  .overskrift h2 {
     color: #C760E2;
     text-align: center;
     padding-top: 15vh;
@@ -196,6 +196,14 @@
 
 
 /*SCENE MODAL */ 
+
+.ModalButton{
+    background-color: transparent;
+    font-weight: bolder;
+    color: white;
+    border:none;
+    margin-bottom: 15px;
+}
 
 .scene_modal_body_jotu{
 height: 100%;
