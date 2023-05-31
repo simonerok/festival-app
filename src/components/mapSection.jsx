@@ -1,7 +1,7 @@
 import styles from "@/styles/Home.module.css";
 import Link from 'next/link';
 
-export function MapKnap(){
+export function MapSection(){
     return(
       <>
         <div className={styles.mapContainer}>

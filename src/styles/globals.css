@@ -2,6 +2,7 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   margin-block-start: 0px;
+  overflow-x: hidden;
 }
 
 .fadeIn {

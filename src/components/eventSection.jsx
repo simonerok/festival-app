@@ -2,7 +2,7 @@ import styles from "@/styles/Home.module.css";
 import Link from 'next/link';
 import { useEffect } from 'react';
 
-export function EventKnap(){
+export function EventSection(){
     return(
       <div className={styles.eventContainer}>
         <h2 className="fadeIn">THIS WEEKS EVENTS</h2>
