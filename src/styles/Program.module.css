@@ -1,8 +1,6 @@
 /* PROGRAM SECTION  */
-.programBackground {
-  background: rgb(86, 229, 230);
-  background: linear-gradient(180deg, rgba(86, 229, 230, 1) 9%, rgba(232, 82, 219, 1) 49%, rgba(160, 235, 88, 1) 90%);
-}
+
+ 
 .programContainer h2 {
   color: white;
   margin-bottom: 1rem;
@@ -64,10 +62,6 @@
 
 @media (max-width: 750px) {
 
-  .program_body{
-  background: rgb(86, 229, 230);
-
-  }
 
   .programText {
     font-size: 2rem;
