@@ -86,6 +86,26 @@ button:hover {
   cursor: pointer;
 }
 
+/* FOOTER */
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 2px black;
+  padding: 2rem 4rem;
+}
+
+.footerContainer h4 {
+  font-weight: bold;
+  font-size: var(--p);
+}
+.footerInfoBox {
+  display: flex;
+  gap: 3rem;
+}
+.footerHeading {
+  font-size: var(--p-footer);
+  font-weight: bold;
+}
 
 /*SCHEDULE*/
 .css-1q1u3t4-MuiTableRow-root{
@@ -98,5 +118,10 @@ button:hover {
     font-size: 2.7rem;
     text-align: center;
   }
-
+@media (max-width: 750px) {
+  .footerContainer,
+  .footerInfoBox {
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  }
 }
