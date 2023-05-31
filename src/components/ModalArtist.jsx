@@ -11,13 +11,18 @@ export default function Modal({ selectedBand, handleCloseModal, showModal }) {
   console.log(selectedBand);
 
   // Check if the logo includes "http"
-  const logoSrc = bandInfo.logo.includes("http") ? bandInfo.logo : `http://localhost:8080/logos/${bandInfo.logo}`;
+  const logoSrc = bandInfo.logo.includes("http")
+    ? bandInfo.logo
+    : `https://nova-enchanted-confidence.glitch.me/logos/${bandInfo.logo}`;
 
   return (
     <div className={styles.modal_artister_body}>
       <section className={styles.ModalSection}>
         {/* Button to close the modal */}
-        <button className={styles.ModalButton} onClick={() => handleCloseModal(false)}>
+        <button
+          className={styles.ModalButton}
+          onClick={() => handleCloseModal(false)}
+        >
           Back to program
         </button>
         <img className={styles.ModalImg} src={logoSrc} alt="Logo" />
@@ -27,15 +32,15 @@ export default function Modal({ selectedBand, handleCloseModal, showModal }) {
       <section className={styles.ModalInfo}>
         <article className={styles.ModalConcertInfo}>
           <p>
-            <span>PLAYING AT:   </span>
+            <span>PLAYING AT: </span>
             {stage}
           </p>
           <p className={styles.modal_artister_dato}>
-            <span></span> 
+            <span></span>
             {day}
           </p>
           <p>
-            <span> </span> 
+            <span> </span>
             {start} - {end}
           </p>
         </article>
