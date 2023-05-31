@@ -49,20 +49,17 @@ export default function FestivalMap({ scheduleData }) {
       1: {
         width: windowWidth * 0.3,
         height: windowHeight * 0.3,
-        left: windowWidth * 0.1,
-        top: windowHeight * 0.4,
+        
       },
       2: {
         width: windowWidth * 0.3,
         height: windowHeight * 0.3,
-        left: windowWidth * 0.55,
-        top: windowHeight * 0.5,
+        
       },
       3: {
         width: windowWidth * 0.25,
         height: windowHeight * 0.25,
-        left: windowWidth * 0.1,
-        top: windowHeight * 0.85,
+        
       },
     };
 
@@ -105,13 +102,8 @@ export default function FestivalMap({ scheduleData }) {
         )
       ) : (
         <div className={styles.mapDiv}>
-          <div className={styles.nav}>
-            <Navigation></Navigation>
-            <Link href="/">
-              <button className={styles.backToIndex}>Back </button>
-            </Link>
-          </div>
           <div className={styles.map_top}>
+          <Navigation></Navigation>
             <h1 className={styles.map_overskrift}>FOO FESTIVAL MAP </h1>
             <p className={styles.map_underOverskrift}>
               click on the tents to see schedule{" "}

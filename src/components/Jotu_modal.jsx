@@ -36,7 +36,7 @@ export function ScheduleCardJOTU({
   }
 
   return (
-    <div className={styles.scene_modal_body}>
+    <div className={styles.scene_modal_body_jotu}>
       <button
         className={styles.ModalButton}
         onClick={() => handleCloseModal(false)}

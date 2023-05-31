@@ -7,7 +7,7 @@ import Banner from "./banner";
 
 
 
-export function ProgramKnap({bandData}){
+export function ProgramSection({bandData}){
     return(
       <>
       <div className={styles.programContainer}>

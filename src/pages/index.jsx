@@ -1,10 +1,9 @@
 import styles from "@/styles/Home.module.css";
 import React from 'react';
 import Link from 'next/link';
-import Banner from "@/components/banner";
-import { ProgramKnap } from "@/components/programKnap";
-import { EventKnap } from "@/components/eventsKnap";
-import { MapKnap } from "@/components/mapKnap";
+import { ProgramSection } from "@/components/programSection";
+import { EventSection } from "@/components/eventSection";
+import { MapSection } from "@/components/mapSection";
 import { useEffect } from 'react';
 import Navigation from "@/components/Navigation";
 
@@ -50,9 +49,9 @@ export default function Home({ bandData }) {
   return (
     <>
       <Overskrift ></Overskrift>
-      <ProgramKnap className="fadeIn" bandData={bandData}></ProgramKnap>
-      <EventKnap className="fadeIn"></EventKnap>
-      <MapKnap className="fadeIn"></MapKnap>
+      <ProgramSection className="fadeIn" bandData={bandData}></ProgramSection>
+      <EventSection className="fadeIn"></EventSection>
+      <MapSection className="fadeIn"></MapSection>
     </>
   );
 }
