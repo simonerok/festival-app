@@ -1,6 +1,16 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { AppBar, Toolbar, Hidden, Box, IconButton, SwipeableDrawer, Divider, List, ListItem } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  Hidden,
+  Box,
+  IconButton,
+  SwipeableDrawer,
+  Divider,
+  List,
+  ListItem,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import styles from "@/styles/Home.module.css";
@@ -20,22 +30,25 @@ export default function Navigation() {
           </Link>
           <div className={styles.flexBox}>
             {/*Box hider navmenuen i mobil xs er en mediaQuiery */}
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {/* Her indsættes vores menuelementer */}
-              <Link className={styles.navStyleBtn1} href="/program">
-                PROGRAM
-              </Link>
-            </Box>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              <Link className={styles.navStyleBtn2} href="/events">
-                EVENTS
-              </Link>
-            </Box>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              <Link className={styles.navStyleBtn2} href="/map">
-                MAP
-              </Link>
-            </Box>
+            <List>
+              <ListItem>
+                <Link className={styles.navStyleBtn2} href="/program">
+                  PROGRAM
+                </Link>
+              </ListItem>
+              <ListItem>
+                {/* Her indsættes vores menuelementer */}
+                <Link className={styles.navStyleBtn2} href="/events">
+                  EVENTS
+                </Link>
+              </ListItem>
+              <ListItem>
+                {/* Her indsættes vores menuelementer */}
+                <Link className={styles.navStyleBtn2} href="/map">
+                  MAP
+                </Link>
+              </ListItem>
+            </List>
           </div>
           {/* Dette gør at burgermenuen forsvinder igen når skærmen bliver større */}
           {/* Burger menu */}
@@ -46,7 +59,12 @@ export default function Navigation() {
             </IconButton>
           </Box>
         </Toolbar>
-        <SwipeableDrawer anchor="right" open={open} onOpen={() => setOpen(true)} onClose={() => setOpen(false)}>
+        <SwipeableDrawer
+          anchor="right"
+          open={open}
+          onOpen={() => setOpen(true)}
+          onClose={() => setOpen(false)}
+        >
           <IconButton className={styles.backIcon}>
             {/* Luk knap */}
             <ChevronRightIcon onClick={() => setOpen(false)} />
