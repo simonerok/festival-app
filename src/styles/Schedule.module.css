@@ -4,19 +4,32 @@
 
 /* SCHEDULE */
 
+
+.schedule_body{
+  background: rgb(104, 231, 88);
+  background: linear-gradient(180deg, rgba(104, 231, 88, 1) 15%, rgba(129, 38, 235, 1) 45%, rgba(82, 230, 232, 1) 82%);
+}
+
 .scheduleSection {
   display: flex;
   margin-inline-start:2rem ;
 }
 .scheduleHeading {
-  /* line-height: 6rem; */
+  line-height: 6rem;
   text-transform: uppercase;
 }
 
+.dayName{
+  text-align: center;
+}
 
 .schedule_sceneNavne{
-  margin-top: 75px;
+  margin-top: 70px;
   margin-inline-start: -10px;
+}
+
+.schedule_sceneNavne p{
+  line-height: 120px;
 }
 .link {
   font-size: var(--h3);
@@ -27,6 +40,9 @@
   display: grid;
   margin-top: -4rem;
   margin-bottom: 8rem;
+}
+.link {
+text-decoration: none;
 }
 .link:hover {
   cursor: pointer;
@@ -42,21 +58,34 @@
 .days {
   display: flex;
   justify-content: center;
-
   gap: 1rem;
   overflow-x: auto;
+  margin-block-end: 40px;
 }
-
+.schedule_days h2{
+  text-align: center;
+}
 .days button {
   flex-shrink: 0;
   /* ensures buttons don't shrink to fit the container width. */
   width: 10rem;
 }
 
-@media (max-width: 1215px) {
+@media (min-width: 700px) {
+  .link {
+    margin-bottom: 16rem;
+  }
+  .days{
+    place-content: center;
+  }
+}
+
+@media (min-width: 400px) {
   .days {
     justify-content: flex-start; /* This ensures the left alignment of items */
     padding: 1rem;
+    margin-top: -20%;
+    margin-block-end: 0px;
   }
   .days button {
     flex-shrink: 0;
@@ -65,141 +94,5 @@
   }
 }
 
-/* OLD SCHEDULE */
 
-.dayName {
-  text-align: center;
-  font-size: 3rem;
-}
-.days_program {
-  display: flex;
-  position: absolute;
-  top: 32rem;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 
-.day_label {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.schema_container {
-  overflow-x: auto;
-}
-.schema_grid {
-  grid-area: 1/2;
-  display: grid;
-  grid-template-columns: repeat(7, minmax(100px, 1fr));
-  gap: 1.5em;
-  overflow-x: scroll;
-}
-
-.schedule_act {
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  padding: 0.5em;
-} /*
-.schedule_act.hide{
-  display:none;
-} */
-
-.scene_label {
-  padding-bottom: 10px;
-}
-.timetable {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 20px;
-}
-.timetable_hour {
-  display: block;
-  height: 150px;
-  position: relative;
-  font-size: 16px;
-  font-weight: bold;
-  color: rgb(31, 31, 31);
-}
-.hourLine_Quarter,
-.hourLine_Quarter_highlight {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  border-top: 2px solid bisque;
-  /* border-top to see each quarter indication */
-}
-
-/* start of hour line */
-.hourLine_Quarter_highlight {
-  border-top: none;
-  border-bottom: 4px solid bisque;
-  line-height: 50px;
-}
-.hourLine_Quarter:nth-child(2) {
-  border-top: 3px dashed bisque;
-  top: 50%;
-}
-
-.bandEvent_section {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.3em;
-  width: 140px;
-  height: min-content;
-}
-.Midgard_bandEvent {
-  background-color: aqua;
-  height: 130px;
-}
-.Midgard_bandEvent_break,
-.Vanaheim_bandEvent_break,
-.Jotunheim_bandEvent_break {
-  background-color: rgb(120, 132, 121);
-  height: 130px;
-}
-/* .bandEvent_section:nth-of-type(2) {
-  background-color: white;
-  height: 130px;
-} */
-
-.Vanaheim_bandEvent {
-  background-color: rgb(207, 31, 169);
-  height: 130px;
-}
-.Jotunheim_bandEvent {
-  background-color: rgb(205 215 98);
-  height: 130px;
-}
-/* time that each band plays */
-.timeSlot_ {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-}
-.timeSlot_ h3:last-child {
-  margin-left: auto;
-}
-
-/* scrollable test */
-.scrollable-grid-container {
-  width: 100%;
-  overflow-x: scroll;
-}
-
-.scrollable-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 10px;
-  padding: 10px;
-  white-space: nowrap;
-}
-
-.grid-item {
-  background-color: #f2f2f2;
-  padding: 20px;
-  text-align: center;
-}

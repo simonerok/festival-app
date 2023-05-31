@@ -1,6 +1,8 @@
 import stylesSchedule from "../styles/Schedule.module.css";
 import { useState } from "react";
 import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import MyButton from "@/components/MyButton";
 
 // MUI
 
@@ -88,20 +90,7 @@ const columns = [
   },
 ];
 
-function createData(
-  time00,
-  time02,
-  time04,
-  time06,
-  time08,
-  time10,
-  time12,
-  time14,
-  time16,
-  time18,
-  time20,
-  time22
-) {
+function createData(time00, time02, time04, time06, time08, time10, time12, time14, time16, time18, time20, time22) {
   return {
     time00,
     time02,
@@ -120,78 +109,14 @@ function createData(
 
 export default function StickyHeadTable({ schedule }) {
   const rows = {
-    Monday: [
-      createData(...test("mon", "Midgard")),
-      createData(...test("mon", "Vanaheim")),
-      createData(...test("mon", "Jotunheim")),
-    ],
-    Tuesday: [
-      createData(...test("tue", "Midgard")),
-      createData(...test("tue", "Vanaheim")),
-      createData(...test("tue", "Jotunheim")),
-    ],
-    Wednesday: [
-      createData(...test("wed", "Midgard")),
-      createData(...test("wed", "Vanaheim")),
-      createData(...test("wed", "Jotunheim")),
-    ],
-    Thursday: [
-      createData(...test("thu", "Midgard")),
-      createData(...test("thu", "Vanaheim")),
-      createData(...test("thu", "Jotunheim")),
-    ],
-    Friday: [
-      createData(...test("fri", "Midgard")),
-      createData(...test("fri", "Vanaheim")),
-      createData(...test("fri", "Jotunheim")),
-    ],
-    Saturday: [
-      createData(...test("sat", "Midgard")),
-      createData(...test("sat", "Vanaheim")),
-      createData(...test("sat", "Jotunheim")),
-    ],
-    Sunday: [
-      createData(...test("sun", "Midgard")),
-      createData(...test("sun", "Vanaheim")),
-      createData(...test("sun", "Jotunheim")),
-    ],
+    Monday: [createData(...test("mon", "Midgard")), createData(...test("mon", "Vanaheim")), createData(...test("mon", "Jotunheim"))],
+    Tuesday: [createData(...test("tue", "Midgard")), createData(...test("tue", "Vanaheim")), createData(...test("tue", "Jotunheim"))],
+    Wednesday: [createData(...test("wed", "Midgard")), createData(...test("wed", "Vanaheim")), createData(...test("wed", "Jotunheim"))],
+    Thursday: [createData(...test("thu", "Midgard")), createData(...test("thu", "Vanaheim")), createData(...test("thu", "Jotunheim"))],
+    Friday: [createData(...test("fri", "Midgard")), createData(...test("fri", "Vanaheim")), createData(...test("fri", "Jotunheim"))],
+    Saturday: [createData(...test("sat", "Midgard")), createData(...test("sat", "Vanaheim")), createData(...test("sat", "Jotunheim"))],
+    Sunday: [createData(...test("sun", "Midgard")), createData(...test("sun", "Vanaheim")), createData(...test("sun", "Jotunheim"))],
   };
-
-  // export default function StickyHeadTable({ schedule }) {
-  //   const rows = [createData(...test("mon", "Midgard")), createData(...test("mon", "Vanaheim")), createData(...test("mon", "Jotunheim"))];
-  //   const rows2 = [createData(...test("tue", "Midgard")), createData(...test("tue", "Vanaheim")), createData(...test("tue", "Jotunheim"))];
-  //   const [day, setDay] = useState("Monday");
-  //   //filter for button days
-  //   function changeDay(event) {
-  //     if (event.target.value === "Monday") {
-  //       setDay("Monday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Tuesday") {
-  //       setDay("Tuesday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Wednesday") {
-  //       setDay("Wednesday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Thursday") {
-  //       setDay("Thursday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Friday") {
-  //       setDay("Friday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Saturday") {
-  //       setDay("Saturday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Sunday") {
-  //       setDay("Sunday");
-  //       console.log(day);
-  //     }
-  //   }
 
   const [day, setDay] = useState("Monday");
   const [displayedDay, setDisplayedDay] = useState("Monday");
@@ -247,6 +172,9 @@ export default function StickyHeadTable({ schedule }) {
   }
   return (
     <>
+ 
+    <div className={stylesSchedule.schedule_body}>
+        <Navigation></Navigation>
       <h1 className={stylesSchedule.scheduleHeading}>Schedule</h1>
       <Link className={stylesSchedule.link} href="/program">
         / Program
@@ -254,27 +182,27 @@ export default function StickyHeadTable({ schedule }) {
       {/* schedule timetable */}
       {/* BUTTONS TO CHOOSE DAYS */}
       <div className={stylesSchedule.days}>
-        <button onClick={changeDay} value="Monday">
+        <MyButton onClick={changeDay} value="Monday">
           Monday
-        </button>
-        <button onClick={changeDay} value="Tuesday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Tuesday">
           Tuesday
-        </button>
-        <button onClick={changeDay} value="Wednesday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Wednesday">
           Wednesday
-        </button>
-        <button onClick={changeDay} value="Thursday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Thursday">
           Thursday
-        </button>
-        <button onClick={changeDay} value="Friday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Friday">
           Friday
-        </button>
-        <button onClick={changeDay} value="Saturday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Saturday">
           Saturday
-        </button>
-        <button onClick={changeDay} value="Sunday">
+        </MyButton>
+        <MyButton onClick={changeDay} value="Sunday">
           Sunday
-        </button>
+        </MyButton>
       </div>
       <h2 className={stylesSchedule.dayName}>{day}</h2>
       <section className={stylesSchedule.scheduleSection}>
@@ -289,11 +217,7 @@ export default function StickyHeadTable({ schedule }) {
               <TableHead>
                 <TableRow>
                   {columns.map((column) => (
-                    <TableCell
-                      key={column.id}
-                      align={column.align}
-                      style={{ minWidth: column.minWidth }}
-                    >
+                    <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
                       {column.label}
                     </TableCell>
                   ))}
@@ -301,34 +225,26 @@ export default function StickyHeadTable({ schedule }) {
               </TableHead>
               <TableBody>
                 {/* changed the MUI "structure" from rows to displayedRows */}
-                {displayedRows
-                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                  .map((row) => {
-                    return (
-                      <TableRow
-                        hover
-                        role="checkbox"
-                        tabIndex={-1}
-                        key={row.code}
-                      >
-                        {columns.map((column) => {
-                          const value = row[column.id];
-                          return (
-                            <TableCell key={column.id} align={column.align}>
-                              {column.format && typeof value === "number"
-                                ? column.format(value)
-                                : value}
-                            </TableCell>
-                          );
-                        })}
-                      </TableRow>
-                    );
-                  })}
+                {displayedRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
+                  return (
+                    <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                      {columns.map((column) => {
+                        const value = row[column.id];
+                        return (
+                          <TableCell key={column.id} align={column.align}>
+                            {column.format && typeof value === "number" ? column.format(value) : value}
+                          </TableCell>
+                        );
+                      })}
+                    </TableRow>
+                  );
+                })}
               </TableBody>
             </Table>
           </TableContainer>
         </Paper>
       </section>
+    </div>
     </>
   );
 }

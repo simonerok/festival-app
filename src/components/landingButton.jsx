@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import styles from "@/styles/Home.module.css";
 
-export default function MyButton({ onClick, children }) {
+export default function LandingButton({ onClick, children }) {
   return (
     <Button
       type="submit"
@@ -9,7 +9,10 @@ export default function MyButton({ onClick, children }) {
       variant="contained"
       sx={{
         borderRadius: 0,
-        backgroundColor: "transparent",
+        width:"30vh",
+        minWidth:"200px",
+        height: "50px",
+        backgroundColor: "#F0FFE2",
         border: "1px solid black",
         boxShadow: "none",
         color: "black",
@@ -17,6 +20,7 @@ export default function MyButton({ onClick, children }) {
           bgcolor: "#DCF2C7",
           border: "none",
           color: "black",
+          
         },
       }}
       onClick={onClick}

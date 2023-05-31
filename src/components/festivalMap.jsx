@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import FestivalPage from "@/pages/map";
 import styles from "@/styles/Home.module.css";
-import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import { ScheduleCardMID } from "./Mid_modal";
 import { ScheduleCardJOTU } from "./Jotu_modal";
@@ -10,7 +8,6 @@ import { ScheduleCardVAN } from "./Van_modal";
 export default function FestivalMap({ scheduleData }) {
   const [hoveredImg, setHoveredImg] = useState(null);
 
-  const [showMap, setShowMap] = useState(true); //this is just to check for the showMap bool val
   const [selectedTent, setSelectedTent] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -24,23 +21,23 @@ export default function FestivalMap({ scheduleData }) {
     };
 
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  
+  //funktion der kører ved klik på telt og sætter tent værdi alt efter hvilket img vi klikker på + sætter setShowModal = true 
   function handleTentClick(tent) {
     setSelectedTent(tent), setShowModal(true);
   }
 
+  //hover effect på telte
   function handleMouseOver(index) {
     setHoveredImg(index);
   }
-
   function handleMouseOut() {
     setHoveredImg(null);
   }
-
   function getImageStyle(index) {
     const scale = hoveredImg === index ? 1.2 : 1;
 
@@ -49,20 +46,17 @@ export default function FestivalMap({ scheduleData }) {
       1: {
         width: windowWidth * 0.3,
         height: windowHeight * 0.3,
-        left: windowWidth * 0.1,
-        top: windowHeight * 0.4,
+        
       },
       2: {
         width: windowWidth * 0.3,
         height: windowHeight * 0.3,
-        left: windowWidth * 0.55,
-        top: windowHeight * 0.5,
+        
       },
       3: {
         width: windowWidth * 0.25,
         height: windowHeight * 0.25,
-        left: windowWidth * 0.1,
-        top: windowHeight * 0.85,
+        
       },
     };
 
@@ -78,6 +72,7 @@ export default function FestivalMap({ scheduleData }) {
     };
   }
 
+  //vores return statemnet i festivalMap funktionen tjekker showmodal værdi og selectedTent værdi
   return (
     <>
       {showModal ? (
@@ -105,13 +100,8 @@ export default function FestivalMap({ scheduleData }) {
         )
       ) : (
         <div className={styles.mapDiv}>
-          <div className={styles.nav}>
-            <Navigation></Navigation>
-            <Link href="/">
-              <button className={styles.backToIndex}>Back </button>
-            </Link>
-          </div>
           <div className={styles.map_top}>
+          <Navigation></Navigation>
             <h1 className={styles.map_overskrift}>FOO FESTIVAL MAP </h1>
             <p className={styles.map_underOverskrift}>
               click on the tents to see schedule{" "}

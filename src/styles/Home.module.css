@@ -1,5 +1,4 @@
 /* NAVIGATION */
-/* Nav menu */
 .logo {
     font-family: var(--heading);
     text-decoration: none;
@@ -40,7 +39,9 @@
   }
   
   .navContainer {
+    position: sticky;
     display: flex;
+    z-index: 100;
     justify-content: space-between;
     padding-block: 2rem;
   }
@@ -50,26 +51,48 @@
   }
   
 
-/* Style for the overskrift class */
+/* LANDING PAGE - OVERSKRIFT */
+
+.index_body{
+    overflow-x: hidden;
+    background: rgb(75, 242, 211);
+  background: linear-gradient(180deg, rgba(75, 242, 211, 1) 15%, rgba(166, 235, 38, 1) 48%, rgba(1, 54, 231, 1) 82%);
+
+}
+
 .overskrift {
-  background-color: #99E854;
-   background-size: contain;
+    background-size: contain;
    background-repeat: no-repeat;
    background-position: center center;
    height: 100vh;
   }
-  
-  
-  /* Additional styles for the overskrift class */
-  .overskrift h1 {
+
+  .overskrift h2 {
     color: #C760E2;
-    font-size: 4rem;
     text-align: center;
     padding-top: 15vh;
   }
 
 
- /*PROGRAM component*/
+
+/* LANDING PAGE - PROGRAM */
+.programContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    
+    color: #FFB928;
+}
+
+.programContainer h2{
+    text-align: center;
+    padding-inline: 5%;
+}
+
  .programKnap {
     width: 50vw; /* Set the width to 100% of the viewport */
     margin-top: 5px;
@@ -77,49 +100,11 @@
     font-size: 2rem;
     text-align: center;
     background-color: white;
-  }
-
-
-.programContainer {
-    display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-position: relative;
-  width: 100%;
-  height: 110vh;
-  background-color:#0039C6;
- 
-  color: #FFB928;
 }
-
-.programContainer h2{
-    font-size: 4rem;
-    text-align: center;
-    padding-inline: 5%;
-}
-
- /*
-.imgContainer{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: -67px;
-    overflow-x: hidden;
-}
- .skyggeProgram{
-    width: 200%;
-    transform: scaleY(-1);
-    transform: translateX(0);
-    transition: transform 0.5s ease;
-  }
-  .skyggeProgram:hover {
-    transform: translateX(-17%); 
-  }*/
 
   
-  /*Event component*/
-  .eventContainer {
+/*LANDING PAGE - EVENT*/
+.eventContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,29 +112,28 @@ position: relative;
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #C760E2;
-  }
+   
+}
   
-  .eventContainer h2 {
+.eventContainer h2 {
     text-align: center;
     margin-bottom: 35px;
     color: #99E854;
-    font-size: 4.5rem;
-  }
+    margin-inline: 10px;
+}
   
-  .eventKnap {
+.eventKnap {
     width: 50vw; /* Set the width to 100% of the viewport */
     margin-top: 5px;
     border: none;
     font-size: 2rem;
     text-align: center;
     background-color: white;
-  }
+}
 
 
-
-  /*MAP component*/
-  .mapContainer {
+/*LANDING PAGE - MAP */
+.mapContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,112 +141,84 @@ position: relative;
     text-align: center;
     height: 100vh;
     width: 100%;
-    background-color: #49F0D3;
-  }
-  
-  .mapContainer svg {
-    margin-bottom: 10px;
-  }
-  .mapContainer h2 {
-    font-size: 4rem;
+    
+}
+
+.mapContainer h2 {
     margin-bottom: 10px;
     color: #FA4DDD;
-  }
+}
   
-  .mapKnap {
+.mapContainer svg {
+    margin-bottom: 10px;
+}
+  
+.mapKnap {
     width: 50vw; /* Set the width to 100% of the viewport */
-    margin-top: 5px;
+    margin-top: 5%;
     border: none;
     font-size: 2rem;
     text-align: center;
     background-color: white;
-  }
-
-
-
-
-
-.artist_column{
-    display: flex;
-    justify-content: left;
-    background-color: rgb(184, 184, 220);
-    width: 100vw; /* Set the width to 100% of the viewport */
-    height: 10rem;
-    margin-top: 10px;
-    border: none;
-    font-size: 1.2rem;
-/* img hya i global 20px margin */
-}
-
-.KnapArtist{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(184, 184, 220);
-    position: absolute;
-    right: 15px;
-    border: none;
-    width: 31px;
-    height: 20px;
-    margin-top: 120px;
 }
 
 
-
-.artister_forside{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.artist_forside {
-    font-size: 8vh;
-  line-height: 0rem;
-  }
-
-
-
-/*STYLING MAP*/ 
+/*STYLING MAP PAGE*/ 
 /*oveerskrift + underoverskrift*/ 
 .map_top{
     background-color:#32A140;
     text-align: center;
-    padding-block: 50px;
+    padding-block: 10px;
     margin-bottom: -35px;
     margin-left: 0px;
     margin-top: -7px;
 }
-
 .map_overskrift{
     font-size: 2rem;
     color: white;
 }
-
 .map_underOverskrift{
     color: white;
     font-size: 1rem;  
     margin-top: -15px
 }
 
+/*placering af telte*/ 
 .telt1{
-    top: 12%;
+    top: 25%;
     left: 3%;
 }
-
 .telt2{
-    top: 12%;
+    top: 25%;
     left: 57%;
 }
-
 .telt3{
-    top:37%;
+    top:66%;
     left:63%;
 }
 
 
-/*STYLING SCENE MODAL*/ 
-.scene_modal_body{
+/*SCENE MODAL */ 
+
+.ModalButton{
+    background-color: transparent;
+    font-weight: bolder;
+    color: white;
+    border:none;
+    margin-bottom: 15px;
+}
+
+.scene_modal_body_jotu{
+height: 100%;
+background-color: #CEB7CC;
+}
+.scene_modal_body_mid{
     height: 100%;
-background-color: #762e75;
+    background-color: #5a2155;
+}
+.scene_modal_body_van{
+    height: 100%;
+    background-color: #aeebfa;
 }
 
 /*scene navn - overskrift*/ 
@@ -274,7 +230,7 @@ background-color: #762e75;
     color: yellow;
 }
 
-/*Knapper med dagene*/ 
+/*Knapper med dage*/ 
 .scene_modal_knapper{
     display: flex;
     justify-content: center;
@@ -304,15 +260,17 @@ background-color: #762e75;
     border-top: 1px solid black;
     margin-top: 5%;
 }
-/*kolonne til højre med band navn*/
-    .column {
-        flex: 1;
-        margin-left: 10%;
-        padding-right: 5%;
-        margin-top: 2%;
-    }
 
-/*Band name*/ 
+
+
+/*kolonnen til højre med band navn*/
+.column {
+    flex: 1;
+    margin-left: 10%;
+    padding-right: 5%;
+    margin-top: 2%;
+}
+/*Band navn*/ 
 .scene_modal_BandName{
     text-transform: uppercase;
     font-size: 1.3rem;
@@ -328,20 +286,13 @@ background-color: #762e75;
 }
 
 
-.backToIndex{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
 
-
+/*STYLING EVENT PAGE*/ 
 .eventOverskrift{
 padding: 1rem;
 }
 
-
-
-  .eventCard {
+.eventCard {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,20 +302,20 @@ padding: 1rem;
     padding-inline: 7%;
     max-width: 300px; /* Adjust this value as needed */
     margin: 0 auto; /* To center the card horizontally */
-  }
+}
   
-  .eventCard img {
+.eventCard img {
     height: 400px;
     max-width: 100%;
-  }
+}
   
-  .eventCard h2 {
+.eventCard h2 {
     margin-top: 10px;
-  }
+}
   
-  .eventCard p {
+.eventCard p {
     margin-top: 5px;
-  }
+}
   
 
 

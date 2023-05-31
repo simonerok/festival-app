@@ -33,7 +33,7 @@ export function ScheduleCardVAN({
   }
 
   return (
-    <div className={styles.scene_modal_body}>
+    <div className={styles.scene_modal_body_van}>
       <button
         className={styles.ModalButton}
         onClick={() => handleCloseModal(false)}

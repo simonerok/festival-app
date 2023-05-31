@@ -1,7 +1,8 @@
 import styles from "@/styles/Home.module.css";
 import Link from 'next/link';
+import LandingButton from "./landingButton";
 
-export function MapKnap(){
+export function MapSection(){
     return(
       <>
         <div className={styles.mapContainer}>
@@ -10,8 +11,8 @@ export function MapKnap(){
 </svg>
 <h2>FESTIVAL MAP</h2>
 <Link href='/map'>
-      <button className={styles.mapKnap}>
-        VIEW MAP </button>
+      <LandingButton className={styles.mapKnap}>
+        VIEW MAP </LandingButton>
     </Link>
 </div>
 

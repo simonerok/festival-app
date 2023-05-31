@@ -40,7 +40,7 @@ export function ScheduleCardMID({
 
   return (
     <>
-      <div className={styles.scene_modal_body}>
+      <div className={styles.scene_modal_body_mid}>
         <button
           className={styles.ModalButton}
           onClick={() => handleCloseModal(false)}
