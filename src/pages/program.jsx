@@ -5,6 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "@/styles/Modal.module.css";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/footer";
 
 export default function Program({ scheduleData, bandData }) {
   // const [stage, setStage] = useState("Monday");
@@ -180,6 +181,7 @@ export default function Program({ scheduleData, bandData }) {
           </section>
         </section>
       )}
+      <Footer></Footer>
     </section>
   );
 }

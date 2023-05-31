@@ -155,7 +155,7 @@
   
 .mapKnap {
     width: 50vw; /* Set the width to 100% of the viewport */
-    margin-top: 5px;
+    margin-top: 5%;
     border: none;
     font-size: 2rem;
     text-align: center;
