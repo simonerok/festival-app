@@ -89,7 +89,20 @@ const columns = [
 ];
 
 function createData(time00, time02, time04, time06, time08, time10, time12, time14, time16, time18, time20, time22) {
-  return { time00, time02, time04, time06, time08, time10, time12, time14, time16, time18, time20, time22 };
+  return {
+    time00,
+    time02,
+    time04,
+    time06,
+    time08,
+    time10,
+    time12,
+    time14,
+    time16,
+    time18,
+    time20,
+    time22,
+  };
 }
 
 export default function StickyHeadTable({ schedule }) {
@@ -102,42 +115,6 @@ export default function StickyHeadTable({ schedule }) {
     Saturday: [createData(...test("sat", "Midgard")), createData(...test("sat", "Vanaheim")), createData(...test("sat", "Jotunheim"))],
     Sunday: [createData(...test("sun", "Midgard")), createData(...test("sun", "Vanaheim")), createData(...test("sun", "Jotunheim"))],
   };
-
-  // export default function StickyHeadTable({ schedule }) {
-  //   const rows = [createData(...test("mon", "Midgard")), createData(...test("mon", "Vanaheim")), createData(...test("mon", "Jotunheim"))];
-  //   const rows2 = [createData(...test("tue", "Midgard")), createData(...test("tue", "Vanaheim")), createData(...test("tue", "Jotunheim"))];
-  //   const [day, setDay] = useState("Monday");
-  //   //filter for button days
-  //   function changeDay(event) {
-  //     if (event.target.value === "Monday") {
-  //       setDay("Monday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Tuesday") {
-  //       setDay("Tuesday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Wednesday") {
-  //       setDay("Wednesday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Thursday") {
-  //       setDay("Thursday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Friday") {
-  //       setDay("Friday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Saturday") {
-  //       setDay("Saturday");
-  //       console.log(day);
-  //     }
-  //     if (event.target.value === "Sunday") {
-  //       setDay("Sunday");
-  //       console.log(day);
-  //     }
-  //   }
 
   const [day, setDay] = useState("Monday");
   const [displayedDay, setDisplayedDay] = useState("Monday");
@@ -267,7 +244,9 @@ export default function StickyHeadTable({ schedule }) {
 }
 
 export async function getServerSideProps() {
-  const api = "http://localhost:8080/schedule";
+  //  const api = "http://localhost:8080/schedule";
+
+  const api = "https://nova-enchanted-confidence.glitch.me/schedule";
   const res = await fetch(api);
   const data = await res.json();
   console.log(data);

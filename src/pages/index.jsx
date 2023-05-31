@@ -1,21 +1,20 @@
 import styles from "@/styles/Home.module.css";
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
 import { ProgramSection } from "@/components/programSection";
 import { EventSection } from "@/components/eventSection";
 import { MapSection } from "@/components/mapSection";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 
 
-export function Overskrift(){
-  return(
+export function Overskrift() {
+  return (
     <>
-    <article className={styles.overskrift}>
-    <Navigation></Navigation>
-    <h1 className="fadeIn">FOO FESTIVALLL</h1>
-  </article>
-  </>
+      <article className={styles.overskrift}>
+        <Navigation></Navigation>
+        <h1 className="fadeIn">FOO FESTIVALLL</h1>
+      </article>
+    </>
   );
 }
 
@@ -24,7 +23,7 @@ og sætter elements til at være alle elementer med denne class*/
 
 export default function Home({ bandData }) {
   useEffect(() => {
-    const elements = document.querySelectorAll('.fadeIn');
+    const elements = document.querySelectorAll(".fadeIn");
     const fadeInElements = Array.from(elements);
 
     function fadeInHandler() {
@@ -33,22 +32,22 @@ export default function Home({ bandData }) {
         const windowHeight = window.innerHeight;
 
         if (elementPosition < windowHeight) {
-          element.classList.add('show');
+          element.classList.add("show");
         }
       });
     }
 
-    window.addEventListener('scroll', fadeInHandler);
+    window.addEventListener("scroll", fadeInHandler);
     fadeInHandler();
 
     return () => {
-      window.removeEventListener('scroll', fadeInHandler);
+      window.removeEventListener("scroll", fadeInHandler);
     };
   }, []);
 
   return (
     <>
-      <Overskrift ></Overskrift>
+      <Overskrift></Overskrift>
       <ProgramSection className="fadeIn" bandData={bandData}></ProgramSection>
       <EventSection className="fadeIn"></EventSection>
       <MapSection className="fadeIn"></MapSection>
@@ -57,7 +56,8 @@ export default function Home({ bandData }) {
 }
 
 export async function getServerSideProps() {
-  const apiEndpoints = ["http://localhost:8080/bands", "http://localhost:8080/schedule", "http://localhost:8080/available-spots"];
+  //const apiEndpoints = ["http://localhost:8080/bands", "http://localhost:8080/schedule", "http://localhost:8080/available-spots"];
+  const apiEndpoints = ["https://nova-enchanted-confidence.glitch.me/bands", "https://nova-enchanted-confidence.glitch.me/schedule", "https://nova-enchanted-confidence.glitch.me/available-spots"];
 
   // mapper igennem hver array alt efter hvilket endpoint det er og fetcher
   const apiRequest = apiEndpoints.map((endpoint) => fetch(endpoint));
