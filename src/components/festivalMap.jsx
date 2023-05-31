@@ -103,7 +103,7 @@ export default function FestivalMap({ scheduleData }) {
         <div className={styles.mapDiv}>
           <div className={styles.map_top}>
           <Navigation></Navigation>
-            <h1 className={styles.map_overskrift}>FOO FESTIVAL MAP </h1>
+            <h1 className={styles.map_overskrift}>FESTIVAL MAP </h1>
             <p className={styles.map_underOverskrift}>
               click on the tents to see schedule{" "}
             </p>

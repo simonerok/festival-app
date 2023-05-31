@@ -98,6 +98,12 @@ button:hover {
   height: 125px;
 }
 
+.body_event{
+  background: rgb(209, 66, 231);
+  background: linear-gradient(180deg, rgb(115, 210, 121) 15%, rgb(76, 208, 232) 48%, rgb(54, 27, 144) 82%);
+
+}
+
 /* FOOTER */
 .footerContainer {
   display: flex;
