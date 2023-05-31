@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import MyButton from "@/components/MyButton";
+import Footer from "@/components/footer";
 
 // MUI
 
@@ -244,6 +245,7 @@ export default function StickyHeadTable({ schedule }) {
           </TableContainer>
         </Paper>
       </section>
+      <Footer></Footer>
     </div>
     </>
   );

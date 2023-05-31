@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import { ScheduleCardMID } from "./Mid_modal";
 import { ScheduleCardJOTU } from "./Jotu_modal";
 import { ScheduleCardVAN } from "./Van_modal";
+import Footer from "@/components/footer";
 
 export default function FestivalMap({ scheduleData }) {
   const [hoveredImg, setHoveredImg] = useState(null);

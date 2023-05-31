@@ -6,6 +6,8 @@ import { ScheduleCardVAN } from "@/components/Van_modal";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 
+
+
 export default function FestivalPage({ scheduleData }) {
   return (
     <>

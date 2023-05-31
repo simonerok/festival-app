@@ -2,6 +2,7 @@ import styles from "@/styles/Home.module.css";
 import React, { useState } from 'react';
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/footer";
 
 
 export default function Events () {
@@ -24,6 +25,7 @@ export default function Events () {
           <h3> overskrift</h3>
           <p>indsæt en kort brødtekst her</p>
         </article>
+        <Footer></Footer>
       </section>
     );
   }
