@@ -29,6 +29,7 @@ export default function FestivalMap({ scheduleData }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  
   function handleTentClick(tent) {
     setSelectedTent(tent), setShowModal(true);
   }
