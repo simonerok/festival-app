@@ -83,6 +83,10 @@
 @media (max-width: 1215px) {
   .days {
     justify-content: flex-start; /* This ensures the left alignment of items */
+    padding: 1rem;
+    margin-top: -20%;
+    margin-block-end: 0px;
+    overflow-x: auto;
   }
 }
 
