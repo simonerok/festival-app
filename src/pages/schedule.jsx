@@ -13,6 +13,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/footer";
 
 const columns = [
   {
@@ -254,6 +255,7 @@ export default function StickyHeadTable({ schedule }) {
           </TableContainer>
         </Paper>
       </section>
+      <Footer></Footer>
     </div>
   );
 }
