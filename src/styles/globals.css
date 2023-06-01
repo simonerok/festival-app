@@ -129,9 +129,7 @@ button:hover {
   font-weight: bold;
 }
 
-.footerInfoBox div{
-  min-width: 500px;
-}
+
 .footerInfoBox p{
 line-height: 1rem;
 }
