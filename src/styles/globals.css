@@ -4,6 +4,18 @@
   margin-block-start: 0px;
 }
 
+.MuiPaper-root{
+  background-color: transparent;
+}
+
+.MuiToolbar{
+  background-color: transparent;
+}
+
+.MuiTableRow{
+  background-color: transparent;
+}
+
 .fadeIn {
   opacity: 0;
   transform: translateY(50px);
@@ -98,6 +110,12 @@ button:hover {
   height: 125px;
 }
 
+.body_event{
+  background: rgb(209, 66, 231);
+  background: linear-gradient(180deg, rgb(115, 210, 121) 15%, rgb(76, 208, 232) 48%, rgb(54, 27, 144) 82%);
+
+}
+
 /* FOOTER */
 .footerContainer {
   display: flex;
@@ -123,9 +141,7 @@ button:hover {
   font-weight: bold;
 }
 
-.footerInfoBox div{
-  min-width: 500px;
-}
+
 .footerInfoBox p{
 line-height: 1rem;
 }

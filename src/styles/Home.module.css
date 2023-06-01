@@ -185,16 +185,16 @@
 
 /*placering af telte*/ 
 .telt1{
-    top: 25%;
+    top: 29%;
     left: 3%;
 }
 .telt2{
-    top: 25%;
+    top: 30%;
     left: 57%;
 }
 .telt3{
     top:66%;
-    left:63%;
+    left:67%;
 }
 
 
@@ -297,24 +297,29 @@ padding: 1rem;
     flex-direction: column;
     align-items: center;
     border: 1px solid #000;
-    background-color: #f0f0f0;
-    padding-block: 5%;
-    padding-inline: 7%;
+    background-color: #ffffff;
+    padding-block: 4%;
+    padding-inline: 4%;
     max-width: 300px; /* Adjust this value as needed */
     margin: 0 auto; /* To center the card horizontally */
+    margin-bottom: 5%;
 }
   
 .eventCard img {
     height: 400px;
-    max-width: 100%;
+    width: 100% ;
+    max-width: 130%;
 }
   
-.eventCard h2 {
-    margin-top: 10px;
+.eventCard h3 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    text-align: center;
 }
   
-.eventCard p {
-    margin-top: 5px;
+.kort_tekst, .lang_tekst {
+    font-size: 1rem;
+    text-align: center;
 }
   
 
