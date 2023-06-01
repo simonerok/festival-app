@@ -12,6 +12,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import Navigation from "@/components/Navigation";
 
 const columns = [
   {
@@ -179,6 +180,7 @@ export default function StickyHeadTable({ schedule }) {
   }
   return (
     <div className={stylesSchedule.schedule_body}>
+      <Navigation></Navigation>
       <Head>
         <title>Schedule</title>
       </Head>
@@ -219,7 +221,7 @@ export default function StickyHeadTable({ schedule }) {
           <h3>Jotunheim</h3>
         </div>
         <Paper sx={{ width: "100%", overflow: "hidden" }}>
-          <TableContainer sx={{ maxHeight: 600 }}>
+          <TableContainer sx={{ maxHeight: 600, overflow: "scroll"}}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
                 <TableRow>
