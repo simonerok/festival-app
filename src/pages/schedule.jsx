@@ -1,9 +1,7 @@
 import stylesSchedule from "../styles/Schedule.module.css";
 import { useState } from "react";
 import Link from "next/link";
-import Navigation from "@/components/Navigation";
-import MyButton from "@/components/MyButton";
-import Footer from "@/components/footer";
+import Head from "next/head";
 
 // MUI
 
@@ -49,7 +47,7 @@ const columns = [
   },
   {
     id: "time10",
-    label: "10:00 - 12:0",
+    label: "10:00 - 12:00",
     minWidth: 170,
     align: "right",
   },
@@ -110,13 +108,13 @@ function createData(time00, time02, time04, time06, time08, time10, time12, time
 
 export default function StickyHeadTable({ schedule }) {
   const rows = {
-    Monday: [createData(...test("mon", "Midgard")), createData(...test("mon", "Vanaheim")), createData(...test("mon", "Jotunheim"))],
-    Tuesday: [createData(...test("tue", "Midgard")), createData(...test("tue", "Vanaheim")), createData(...test("tue", "Jotunheim"))],
-    Wednesday: [createData(...test("wed", "Midgard")), createData(...test("wed", "Vanaheim")), createData(...test("wed", "Jotunheim"))],
-    Thursday: [createData(...test("thu", "Midgard")), createData(...test("thu", "Vanaheim")), createData(...test("thu", "Jotunheim"))],
-    Friday: [createData(...test("fri", "Midgard")), createData(...test("fri", "Vanaheim")), createData(...test("fri", "Jotunheim"))],
-    Saturday: [createData(...test("sat", "Midgard")), createData(...test("sat", "Vanaheim")), createData(...test("sat", "Jotunheim"))],
-    Sunday: [createData(...test("sun", "Midgard")), createData(...test("sun", "Vanaheim")), createData(...test("sun", "Jotunheim"))],
+    Monday: [createData(...days("mon", "Midgard")), createData(...days("mon", "Vanaheim")), createData(...days("mon", "Jotunheim"))],
+    Tuesday: [createData(...days("tue", "Midgard")), createData(...days("tue", "Vanaheim")), createData(...days("tue", "Jotunheim"))],
+    Wednesday: [createData(...days("wed", "Midgard")), createData(...days("wed", "Vanaheim")), createData(...days("wed", "Jotunheim"))],
+    Thursday: [createData(...days("thu", "Midgard")), createData(...days("thu", "Vanaheim")), createData(...days("thu", "Jotunheim"))],
+    Friday: [createData(...days("fri", "Midgard")), createData(...days("fri", "Vanaheim")), createData(...days("fri", "Jotunheim"))],
+    Saturday: [createData(...days("sat", "Midgard")), createData(...days("sat", "Vanaheim")), createData(...days("sat", "Jotunheim"))],
+    Sunday: [createData(...days("sun", "Midgard")), createData(...days("sun", "Vanaheim")), createData(...days("sun", "Jotunheim"))],
   };
 
   const [day, setDay] = useState("Monday");
@@ -131,8 +129,16 @@ export default function StickyHeadTable({ schedule }) {
   function changeDay(event) {
     const selectedDay = event.target.value;
     setDay(selectedDay);
-    console.log(day);
     updateDisplayedDay(selectedDay);
+    // tilføjer active styling til valgte day buttons
+    const buttons = document.querySelectorAll(`.${stylesSchedule.days} button`);
+    buttons.forEach((button) => {
+      if (button.value === selectedDay) {
+        button.classList.add(stylesSchedule.activeButton);
+      } else {
+        button.classList.remove(stylesSchedule.activeButton);
+      }
+    });
   }
 
   // Retrieve the rows for the displayed day
@@ -152,7 +158,7 @@ export default function StickyHeadTable({ schedule }) {
     setPage(0);
   };
 
-  function test(day, stage) {
+  function days(day, stage) {
     // Object to store the results
     const results = [];
     //for (const day in schedule.Midgard) {
@@ -172,10 +178,10 @@ export default function StickyHeadTable({ schedule }) {
     return results;
   }
   return (
-    <>
- 
     <div className={stylesSchedule.schedule_body}>
-        <Navigation></Navigation>
+      <Head>
+        <title>Schedule</title>
+      </Head>
       <h1 className={stylesSchedule.scheduleHeading}>Schedule</h1>
       <Link className={stylesSchedule.link} href="/program">
         / Program
@@ -183,37 +189,37 @@ export default function StickyHeadTable({ schedule }) {
       {/* schedule timetable */}
       {/* BUTTONS TO CHOOSE DAYS */}
       <div className={stylesSchedule.days}>
-        <MyButton onClick={changeDay} value="Monday">
+        <button onClick={changeDay} value="Monday">
           Monday
-        </MyButton>
-        <MyButton onClick={changeDay} value="Tuesday">
+        </button>
+        <button onClick={changeDay} value="Tuesday">
           Tuesday
-        </MyButton>
-        <MyButton onClick={changeDay} value="Wednesday">
+        </button>
+        <button onClick={changeDay} value="Wednesday">
           Wednesday
-        </MyButton>
-        <MyButton onClick={changeDay} value="Thursday">
+        </button>
+        <button onClick={changeDay} value="Thursday">
           Thursday
-        </MyButton>
-        <MyButton onClick={changeDay} value="Friday">
+        </button>
+        <button onClick={changeDay} value="Friday">
           Friday
-        </MyButton>
-        <MyButton onClick={changeDay} value="Saturday">
+        </button>
+        <button onClick={changeDay} value="Saturday">
           Saturday
-        </MyButton>
-        <MyButton onClick={changeDay} value="Sunday">
+        </button>
+        <button onClick={changeDay} value="Sunday">
           Sunday
-        </MyButton>
+        </button>
       </div>
       <h2 className={stylesSchedule.dayName}>{day}</h2>
       <section className={stylesSchedule.scheduleSection}>
-        <div className={stylesSchedule.schedule_sceneNavne}>
-          <p>Midgard</p> <br />
-          <p>Vanaheim</p> <br />
-          <p>Jotunheim</p>
+        <div className={stylesSchedule.scheduleStages}>
+          <h3>Midgard</h3>
+          <h3>Vanaheim</h3>
+          <h3>Jotunheim</h3>
         </div>
         <Paper sx={{ width: "100%", overflow: "hidden" }}>
-          <TableContainer sx={{ maxHeight: 440 }}>
+          <TableContainer sx={{ maxHeight: 600 }}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
                 <TableRow>
@@ -245,20 +251,20 @@ export default function StickyHeadTable({ schedule }) {
           </TableContainer>
         </Paper>
       </section>
-      <Footer></Footer>
     </div>
-    </>
   );
 }
 
 export async function getServerSideProps() {
-  //  const api = "http://localhost:8080/schedule";
-
+  //const api = "http://localhost:8080/schedule";
   const api = "https://nova-enchanted-confidence.glitch.me/schedule";
   const res = await fetch(api);
   const data = await res.json();
   console.log(data);
   return {
-    props: { schedule: data },
+    props: {
+      schedule: data,
+      isSchedule: true,
+    },
   };
 }

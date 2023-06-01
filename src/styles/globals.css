@@ -4,6 +4,18 @@
   margin-block-start: 0px;
 }
 
+.MuiPaper-root{
+  background-color: transparent;
+}
+
+.MuiToolbar{
+  background-color: transparent;
+}
+
+.MuiTableRow{
+  background-color: transparent;
+}
+
 .fadeIn {
   opacity: 0;
   transform: translateY(50px);
