@@ -4,6 +4,9 @@
   margin-block-start: 0px;
 }
 
+.space{
+  margin-right: 10px;
+}
 
 .MuiPaper-root{
   background-color: transparent;
