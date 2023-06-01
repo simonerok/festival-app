@@ -225,7 +225,7 @@ export default function StickyHeadTable({ schedule }) {
           <TableContainer sx={{ maxHeight: 600, overflow: "scroll"}}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
-                <TableRow sx={{ height:'80px'}} >
+                <TableRow sx={{ height:'80px', opacity:'80%'}} >
                   {columns.map((column) => (
                     <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
                       {column.label}
@@ -237,7 +237,7 @@ export default function StickyHeadTable({ schedule }) {
                 {/* changed the MUI "structure" from rows to displayedRows */}
                 {displayedRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                   return (
-                    <TableRow hover role="checkbox" tabIndex={-1} key={row.code} sx={{ height:'190px'}}>
+                    <TableRow hover role="checkbox" tabIndex={-1} key={row.code} sx={{ height:'170px'}}>
                       {columns.map((column) => {
                         const value = row[column.id];
                         return (

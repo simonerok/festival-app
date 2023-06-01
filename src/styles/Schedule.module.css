@@ -92,7 +92,7 @@
 .scene_van{
   margin-inline-end: -15px;
   border-bottom: 1.2px solid rgba(224, 224, 224, 1);
-  margin-top: 6.6rem;
+  margin-top: 151px;
 }
 
 .scene_mid{
@@ -105,7 +105,7 @@ border-bottom: 1.2px solid rgba(224, 224, 224, 1);
 .scene_jotu{
   margin-inline-end: -15px;
   border-bottom: 1px solid rgba(224, 224, 224, 1);
-  margin-top: 6.4rem;
+  margin-top: 148px;
 }
 
   /* ændre margin top i desk for at streger passer */
@@ -115,13 +115,12 @@ border-bottom: 1.2px solid rgba(224, 224, 224, 1);
   }
 
   .scene_van{
-    margin-top: 87px;
+    margin-top: 132px;
   }
 
   .scene_jotu{
-    margin-top: 84px;
+    margin-top: 130px;
   }
-  
 }
 
 

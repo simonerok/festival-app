@@ -23,7 +23,7 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <AppBar position="sticky" className={styles.navMenu} sx={{bgcolor:'transparent'}}>
+      <AppBar position="sticky" className={styles.navMenu} sx={{bgcolor:'transparent', boxShadow:'none'}}>
         <Toolbar className={styles.navContainer}>
           <Link className={styles.logo} href="./">
             FOO <br /> FESTIVAL
