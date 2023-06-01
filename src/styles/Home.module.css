@@ -176,11 +176,11 @@
 .map_overskrift{
     font-size: 2rem;
     color: white;
-    text-align: center
+    text-align: center;
 }
 .map_underOverskrift{
     color: white;
-    text-align: center
+    text-align: center;
     font-size: 1rem;  
     margin-top: -15px
 }
