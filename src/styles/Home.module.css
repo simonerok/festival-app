@@ -167,7 +167,7 @@
 /*oveerskrift + underoverskrift*/ 
 .map_top{
     background-color:#32A140;
-    text-align: center;
+/*     text-align: center; */
     padding-block: 10px;
     margin-bottom: -35px;
     margin-left: 0px;
@@ -176,9 +176,11 @@
 .map_overskrift{
     font-size: 2rem;
     color: white;
+    text-align: center
 }
 .map_underOverskrift{
     color: white;
+    text-align: center
     font-size: 1rem;  
     margin-top: -15px
 }
