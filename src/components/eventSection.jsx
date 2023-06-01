@@ -1,7 +1,5 @@
 import styles from "@/styles/Home.module.css";
 import Link from 'next/link';
-import { useEffect } from 'react';
-import MyButton from "./MyButton";
 import LandingButton from "./landingButton";
 
 export function EventSection(){

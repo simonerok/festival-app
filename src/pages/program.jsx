@@ -3,7 +3,6 @@ import { useState } from "react";
 import Modal from "@/components/ModalArtist";
 import Head from "next/head";
 import Link from "next/link";
-import styles from "@/styles/Modal.module.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/footer";
 

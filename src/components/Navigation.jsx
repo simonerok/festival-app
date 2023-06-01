@@ -15,9 +15,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import styles from "@/styles/Home.module.css";
 
-/* alle skal indstallere følgende:
-npm install @mui/icons-material @mui/material @emotion/styled @emotion/react */
-
 /* Desktop navigation */
 export default function Navigation() {
   const [open, setOpen] = useState(false);

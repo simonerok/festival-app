@@ -1,6 +1,5 @@
 import styles from "@/styles/Home.module.css";
 import React, { useState } from 'react';
-import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/footer";
 

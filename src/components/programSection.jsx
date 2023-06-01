@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
-import { GetServerSideProps } from "next";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Banner from "./banner";
 import LandingButton from "./landingButton";
 

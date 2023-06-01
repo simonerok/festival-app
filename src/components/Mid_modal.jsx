@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "@/styles/Home.module.css";
-import FestivalMap from "./festivalMap";
-import Link from "next/link";
+
 
 export function ScheduleCardMID({
   scheduleData,
