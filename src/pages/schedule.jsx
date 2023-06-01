@@ -222,10 +222,10 @@ export default function StickyHeadTable({ schedule }) {
           <h3 className={stylesSchedule.scene_jotu}>Jotunheim</h3>
         </div>
         <Paper sx={{ width: "100%", overflow: "hidden", bgcolor:'transparent'}}>
-          <TableContainer sx={{ maxHeight: 800, overflow: "scroll"}}>
+          <TableContainer sx={{ maxHeight: 600, overflow: "scroll"}}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
-                <TableRow>
+                <TableRow sx={{ height:'193px'}} >
                   {columns.map((column) => (
                     <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
                       {column.label}
