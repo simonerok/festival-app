@@ -237,7 +237,7 @@ export default function StickyHeadTable({ schedule }) {
                 {/* changed the MUI "structure" from rows to displayedRows */}
                 {displayedRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                   return (
-                    <TableRow hover role="checkbox" tabIndex={-1} key={row.code} sx={{ height:'80px'}}>
+                    <TableRow hover role="checkbox" tabIndex={-1} key={row.code} sx={{ height:'190px'}}>
                       {columns.map((column) => {
                         const value = row[column.id];
                         return (
