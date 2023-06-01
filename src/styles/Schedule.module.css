@@ -31,6 +31,7 @@
   /* line-height: 6rem; */
   text-transform: uppercase;
   padding-top:2rem;
+  margin-bottom: 0px;
 }
 
 .link {
@@ -80,6 +81,50 @@
   background-color: white;
 }
 
+  /* linje under knapper der indikerer at man kan scroll */
+.scroll_tekst{
+  padding-left: 30px;
+  margin-top: -10px;
+  font-size: 0.8rem;
+}
+
+  /* scene navne med border-bottom for at lave streger på hele vh i mobil */
+.scene_van{
+  margin-inline-end: -15px;
+  border-bottom: 1.2px solid rgba(224, 224, 224, 1);
+  margin-top: 6.6rem;
+}
+
+.scene_mid{
+margin-inline-end: -15px;
+border-bottom: 1.2px solid rgba(224, 224, 224, 1);
+  margin-top: 9.4rem;
+}
+
+
+.scene_jotu{
+  margin-inline-end: -15px;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  margin-top: 6.4rem;
+}
+
+  /* ændre margin top i desk for at streger passer */
+@media (min-width: 800px) {
+  .scene_mid{
+    margin-top: 143px;
+  }
+
+  .scene_van{
+    margin-top: 87px;
+  }
+
+  .scene_jotu{
+    margin-top: 84px;
+  }
+  
+}
+
+
 @media (max-width: 1215px) {
   .days {
     justify-content: flex-start; /* This ensures the left alignment of items */
@@ -103,5 +148,9 @@
     font-size: 1.6rem;
   }
 }
+
+
+
+
 
 

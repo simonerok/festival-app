@@ -213,15 +213,16 @@ export default function StickyHeadTable({ schedule }) {
           Sunday
         </button>
       </div>
+      <p className={stylesSchedule.scroll_tekst}>Scroll left</p>
       <h2 className={stylesSchedule.dayName}>{day}</h2>
       <section className={stylesSchedule.scheduleSection}>
         <div className={stylesSchedule.scheduleStages}>
-          <h3>Midgard</h3>
-          <h3>Vanaheim</h3>
-          <h3>Jotunheim</h3>
+          <h3 className={stylesSchedule.scene_mid}>Midgard</h3>
+          <h3 className={stylesSchedule.scene_van}>Vanaheim</h3>
+          <h3 className={stylesSchedule.scene_jotu}>Jotunheim</h3>
         </div>
         <Paper sx={{ width: "100%", overflow: "hidden" }}>
-          <TableContainer sx={{ maxHeight: 600, overflow: "scroll"}}>
+          <TableContainer sx={{ maxHeight: 800, overflow: "scroll"}} style={{backgroundColor:'transparent'}}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
                 <TableRow>

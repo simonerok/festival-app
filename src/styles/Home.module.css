@@ -298,7 +298,8 @@ padding: 1rem;
     align-items: center;
     border: 1px solid #000;
     background-color: #ffffff;
-    padding-block: 4%;
+    padding-top: 4%;
+    padding-bottom: 2%;
     padding-inline: 4%;
     max-width: 300px; /* Adjust this value as needed */
     margin: 0 auto; /* To center the card horizontally */
