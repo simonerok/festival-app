@@ -221,8 +221,8 @@ export default function StickyHeadTable({ schedule }) {
           <h3 className={stylesSchedule.scene_van}>Vanaheim</h3>
           <h3 className={stylesSchedule.scene_jotu}>Jotunheim</h3>
         </div>
-        <Paper sx={{ width: "100%", overflow: "hidden" }}>
-          <TableContainer sx={{ maxHeight: 800, overflow: "scroll"}} style={{backgroundColor:'transparent'}}>
+        <Paper sx={{ width: "100%", overflow: "hidden", bgcolor:'transparent'}}>
+          <TableContainer sx={{ maxHeight: 800, overflow: "scroll"}}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
                 <TableRow>
