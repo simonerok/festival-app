@@ -91,6 +91,7 @@ const columns = [
   },
 ];
 
+/* Laver en række til hvert array i skemaet */
 function createData(time00, time02, time04, time06, time08, time10, time12, time14, time16, time18, time20, time22) {
   return {
     time00,
@@ -108,6 +109,7 @@ function createData(time00, time02, time04, time06, time08, time10, time12, time
   };
 }
 
+/* hvad skemaet indeholder */
 export default function StickyHeadTable({ schedule }) {
   const rows = {
     Monday: [createData(...days("mon", "Midgard")), createData(...days("mon", "Vanaheim")), createData(...days("mon", "Jotunheim"))],
@@ -222,11 +224,11 @@ export default function StickyHeadTable({ schedule }) {
           <h3 className={stylesSchedule.scene_van}>Vanaheim</h3>
           <h3 className={stylesSchedule.scene_jotu}>Jotunheim</h3>
         </div>
-        <Paper sx={{ width: "100%", overflow: "hidden", bgcolor:'transparent'}}>
-          <TableContainer sx={{ maxHeight: 600, overflow: "scroll"}}>
+        <Paper sx={{ width: "100%", overflow: "hidden", bgcolor: "transparent" }}>
+          <TableContainer sx={{ maxHeight: 600, overflow: "scroll" }}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
-                <TableRow sx={{ height:'80px', opacity:'80%'}} >
+                <TableRow sx={{ height: "80px", opacity: "80%" }}>
                   {columns.map((column) => (
                     <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
                       {column.label}
@@ -238,7 +240,7 @@ export default function StickyHeadTable({ schedule }) {
                 {/* changed the MUI "structure" from rows to displayedRows */}
                 {displayedRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                   return (
-                    <TableRow hover role="checkbox" tabIndex={-1} key={row.code} sx={{ height:'170px'}}>
+                    <TableRow hover role="checkbox" tabIndex={-1} key={row.code} sx={{ height: "170px" }}>
                       {columns.map((column) => {
                         const value = row[column.id];
                         return (
